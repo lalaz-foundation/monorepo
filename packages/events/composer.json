@@ -1,0 +1,64 @@
+{
+    "name": "lalaz/events",
+    "description": "Event dispatcher with listeners, subscribers, and async queue support.",
+    "version": "1.0.0-rc.1",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../queue",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../framework",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../database",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../testing",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0 || ^12.0",
+        "lalaz/queue": "@dev",
+        "lalaz/framework": "@dev",
+        "lalaz/testing": "@dev"
+    },
+    "suggest": {
+        "lalaz/queue": "Required for queue-based async event dispatching"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Events\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Events\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

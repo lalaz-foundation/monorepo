@@ -1,0 +1,9 @@
+{
+    "name": "lalaz/web",
+    "description": "Views, templates, sessions, CSRF protection, and rendering utilities.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Web\\WebServiceProvider",
+    "uninstall": {
+        "keep_config": true
+    }
+}

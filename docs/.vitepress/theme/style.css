@@ -1,0 +1,27 @@
+:root {
+  --vp-c-bg: #000000 !important;
+  --vp-c-bg-alt: #000000 !important;
+  --vp-c-bg-soft: #000000 !important;
+}
+
+.VPNavBarTitle .logo {
+  height: 36px !important;
+  width: auto;
+}
+
+.VPNavBarTitle .title {
+  font-size: 22px !important;
+  font-weight: 700;
+}
+
+.VPSidebar {
+  background-color: #000000 !important;
+}
+
+.VPNavBar {
+  background-color: #000000 !important;
+}
+
+.content-body {
+  background-color: #000000 !important;
+}

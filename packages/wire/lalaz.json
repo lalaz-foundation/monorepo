@@ -1,0 +1,9 @@
+{
+    "name": "lalaz/wire",
+    "description": "HTTP client with middleware pipeline, retries, and circuit breaker.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Wire\\WireServiceProvider",
+    "uninstall": {
+        "keep_config": true
+    }
+}

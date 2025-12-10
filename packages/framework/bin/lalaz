@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+require __DIR__ . "/../vendor/autoload.php";
+
+use Lalaz\Runtime\Console\ConsoleKernel;
+
+$basePath = getcwd() ?: __DIR__ . "/../../..";
+$kernel = ConsoleKernel::boot($basePath);
+
+exit($kernel->run($argv));
+

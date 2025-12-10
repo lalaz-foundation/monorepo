@@ -1,0 +1,70 @@
+{
+    "name": "lalaz/auth",
+    "description": "Authentication and authorization with JWT, sessions, API keys, and RBAC.",
+    "version": "1.0.0-rc.1",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "lalaz",
+        "authentication",
+        "authorization",
+        "jwt",
+        "session",
+        "api-key",
+        "guards",
+        "middleware",
+        "rbac",
+        "permissions"
+    ],
+    "authors": [
+        {
+            "name": "Gregory Serrao",
+            "email": "hello@lalaz.dev"
+        }
+    ],
+    "homepage": "https://lalaz.dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework"
+        },
+        {
+            "type": "path",
+            "url": "../testing"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "lalaz/framework": "@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "lalaz/testing": "@dev"
+    },
+    "suggest": {
+        "lalaz/web": "Required for session-based authentication (^1.0)",
+        "lalaz/orm": "For ORM-based user models with findOneByExpression (^1.0)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Auth\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Auth\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "lalaz": {
+            "providers": [
+                "Lalaz\\Auth\\AuthServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

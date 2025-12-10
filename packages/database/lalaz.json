@@ -1,0 +1,24 @@
+{
+    "name": "lalaz/database",
+    "description": "Database abstraction layer with connection pooling and fluent query builder.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Database\\DatabaseServiceProvider",
+    "install": {
+        "config": {
+            "stub": "config/database.php",
+            "destination": "config/database.php",
+            "overwrite": false
+        },
+        "env": [
+            "DB_DRIVER",
+            "DB_HOST",
+            "DB_PORT",
+            "DB_DATABASE",
+            "DB_USERNAME",
+            "DB_PASSWORD"
+        ]
+    },
+    "uninstall": {
+        "keep_config": false
+    }
+}

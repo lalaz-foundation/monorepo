@@ -1,0 +1,35 @@
+{
+    "name": "lalaz/app",
+    "description": "Create a new Lalaz application with an interactive wizard",
+    "type": "project",
+    "license": "MIT",
+    "keywords": ["lalaz", "php", "framework", "installer", "wizard"],
+    "authors": [
+        {
+            "name": "Lalaz Foundation",
+            "email": "dev@lalaz.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "lalaz/framework": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Installer\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "Lalaz\\Installer\\Installer::run"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

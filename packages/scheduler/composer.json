@@ -1,0 +1,44 @@
+{
+    "name": "lalaz/scheduler",
+    "description": "Task scheduling for Lalaz applications with cron-like syntax",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0-rc.1",
+    "authors": [
+        {
+            "name": "Gregory Serrao",
+            "email": "hello@lalaz.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "lalaz/cache": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../cache"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Scheduler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Scheduler\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "lalaz": {
+            "providers": [
+                "Lalaz\\Scheduler\\SchedulerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    }
+}

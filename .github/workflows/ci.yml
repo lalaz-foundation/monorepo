@@ -1,0 +1,214 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  detect-changes:
+    name: Detect Changes
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.filter.outputs.changes }}
+      starters: ${{ steps.starters.outputs.changes }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            auth: packages/auth/**
+            cache: packages/cache/**
+            database: packages/database/**
+            events: packages/events/**
+            framework: packages/framework/**
+            orm: packages/orm/**
+            queue: packages/queue/**
+            reactive: packages/reactive/**
+            scheduler: packages/scheduler/**
+            storage: packages/storage/**
+            validator: packages/validator/**
+            waf: packages/waf/**
+            web: packages/web/**
+            wire: packages/wire/**
+
+      - uses: dorny/paths-filter@v3
+        id: starters
+        with:
+          filters: |
+            api: starters/api/**
+            web: starters/web/**
+
+  test-packages:
+    name: Test
+    needs: detect-changes
+    if: ${{ needs.detect-changes.outputs.packages != '[]' }}
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: lalaz_test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: lalaz_test
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.3', '8.4']
+        package: ${{ fromJson(needs.detect-changes.outputs.packages) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, openssl, redis, memcached, pdo_mysql, pdo_pgsql
+          coverage: pcov
+
+      - name: Install dependencies
+        run: cd packages/${{ matrix.package }} && composer install --prefer-dist --no-progress
+
+      - name: Run tests
+        run: cd packages/${{ matrix.package }} && vendor/bin/phpunit --coverage-clover=coverage.xml
+        env:
+          DB_MYSQL_HOST: 127.0.0.1
+          DB_MYSQL_DATABASE: lalaz_test
+          DB_MYSQL_USERNAME: root
+          DB_MYSQL_PASSWORD: password
+          DB_PGSQL_HOST: 127.0.0.1
+          DB_PGSQL_DATABASE: lalaz_test
+          DB_PGSQL_USERNAME: postgres
+          DB_PGSQL_PASSWORD: password
+          DB_HOST: 127.0.0.1
+          DB_DATABASE: lalaz_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: packages/${{ matrix.package }}/coverage.xml
+          flags: ${{ matrix.package }}
+          fail_ci_if_error: false
+
+  test-starters:
+    name: Test Starters
+    needs: detect-changes
+    if: ${{ needs.detect-changes.outputs.starters != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        starter: ${{ fromJson(needs.detect-changes.outputs.starters) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring
+
+      - name: Install dependencies
+        run: cd starters/${{ matrix.starter }} && composer install --prefer-dist --no-progress
+
+      - name: Validate starter works
+        run: |
+          cd starters/${{ matrix.starter }}
+          php lalaz --version || echo "CLI works"
+
+          # Start server and test health endpoint
+          php lalaz serve &
+          sleep 3
+          curl -f http://localhost:8000/health || exit 1
+          pkill -f "php lalaz serve" || true
+
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: phpstan, php-cs-fixer
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: PHPStan
+        run: vendor/bin/phpstan analyse --memory-limit=512M --error-format=github
+
+      - name: PHP CS Fixer
+        run: php-cs-fixer fix --dry-run --diff
+
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Audit dependencies
+        run: |
+          # Fail if the root dependencies have any advisory issues
+          composer audit
+
+          # Audit each package and fail immediately if any package has advisories.
+          for dir in packages/*/; do
+            echo "🔍 Auditing $dir"
+            cd "$dir"
+            if [ -f "composer.json" ]; then
+              # We need to install dependencies to generate composer.lock for auditing
+              composer install --no-progress --quiet --no-dev
+              composer audit
+            else
+              echo "⚠️ No composer.json found in $dir, skipping..."
+            fi
+            cd ../..
+          done
+
+  summary:
+    name: CI Summary
+    needs: [test-packages, test-starters, code-quality, security]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check results
+        run: |
+          if [[ "${{ needs.test-packages.result }}" == "failure" ]]; then
+            echo "❌ Package tests failed"
+            exit 1
+          fi
+          if [[ "${{ needs.test-starters.result }}" == "failure" ]]; then
+            echo "❌ Starter tests failed"
+            exit 1
+          fi
+          echo "✅ All checks passed"

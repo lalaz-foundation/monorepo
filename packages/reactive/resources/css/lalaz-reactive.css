@@ -1,0 +1,253 @@
+/**
+ * Lalaz Reactive - Default Styles
+ *
+ * @package lalaz/reactive
+ * @author Gregory Serrao <hello@lalaz.dev>
+ * @link https://lalaz.dev
+ */
+
+/* ==========================================================================
+   Loading States - reactive:loading directives
+   ========================================================================== */
+
+/* Hide loading elements by default */
+[reactive\:loading] {
+    display: none;
+}
+
+/* Show when loading class is applied via JS */
+[reactive\:loading].reactive-show {
+    display: inline-block;
+}
+
+/* Loading container overlay */
+[reactive\:id].reactive-loading {
+    pointer-events: none;
+    position: relative;
+}
+
+/* Button loading state */
+button.reactive-loading,
+a.reactive-loading,
+[type="submit"].reactive-loading {
+    opacity: 0.65;
+    cursor: wait;
+    position: relative;
+}
+
+/* Loading spinner for buttons */
+button.reactive-loading::after,
+[type="submit"].reactive-loading::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -7px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: reactive-spin 0.6s linear infinite;
+}
+
+@keyframes reactive-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide button text during loading */
+button.reactive-loading.reactive-loading-text-hidden,
+[type="submit"].reactive-loading.reactive-loading-text-hidden {
+    color: transparent;
+}
+
+/* ==========================================================================
+   Loading Indicator Styles
+   ========================================================================== */
+
+/* Spinner */
+.reactive-spinner {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: reactive-spin 0.6s linear infinite;
+    vertical-align: middle;
+}
+
+.reactive-spinner-sm {
+    width: 0.75em;
+    height: 0.75em;
+    border-width: 1.5px;
+}
+
+.reactive-spinner-lg {
+    width: 1.5em;
+    height: 1.5em;
+    border-width: 3px;
+}
+
+/* Dots loading animation */
+.reactive-dots {
+    display: inline-flex;
+    gap: 0.25em;
+}
+
+.reactive-dots span {
+    width: 0.4em;
+    height: 0.4em;
+    background: currentColor;
+    border-radius: 50%;
+    animation: reactive-dots-bounce 1.4s infinite ease-in-out both;
+}
+
+.reactive-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.reactive-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes reactive-dots-bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Pulse loading animation */
+.reactive-pulse {
+    animation: reactive-pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes reactive-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Skeleton loading */
+.reactive-skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: reactive-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.reactive-skeleton-dark {
+    background: linear-gradient(
+        90deg,
+        #3a3a3a 25%,
+        #4a4a4a 50%,
+        #3a3a3a 75%
+    );
+    background-size: 200% 100%;
+    animation: reactive-skeleton-shimmer 1.5s infinite;
+}
+
+@keyframes reactive-skeleton-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Skeleton text line */
+.reactive-skeleton-text {
+    height: 1em;
+    margin-bottom: 0.5em;
+}
+
+.reactive-skeleton-text:last-child {
+    width: 80%;
+}
+
+/* Skeleton circle (avatar) */
+.reactive-skeleton-circle {
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   Utility Classes for Loading States
+   ========================================================================== */
+
+/* Disable interaction during loading */
+.reactive-disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+/* Opacity variations for loading states */
+.reactive-opacity-50 {
+    opacity: 0.5;
+}
+
+.reactive-opacity-25 {
+    opacity: 0.25;
+}
+
+/* Blur effect for loading */
+.reactive-blur {
+    filter: blur(1px);
+    transition: filter 0.15s ease;
+}
+
+/* ==========================================================================
+   Dirty State (form has unsaved changes)
+   ========================================================================== */
+
+[reactive\:id].reactive-dirty {
+    /* Add your dirty state styles */
+}
+
+/* Visual indicator for dirty inputs */
+input.reactive-dirty,
+textarea.reactive-dirty,
+select.reactive-dirty {
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 1px #f59e0b;
+}
+
+/* ==========================================================================
+   Error State
+   ========================================================================== */
+
+[reactive\:id].reactive-error {
+    /* Add your error state styles */
+}
+
+/* ==========================================================================
+   Offline State
+   ========================================================================== */
+
+[reactive\:id].reactive-offline {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.reactive-offline-banner {
+    background: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+

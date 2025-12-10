@@ -1,0 +1,145 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+env:
+  PHP_VERSION: '8.3'
+
+jobs:
+  validate:
+    name: Validate Release
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      is_prerelease: ${{ steps.version.outputs.is_prerelease }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG=${GITHUB_REF#refs/tags/v}
+          echo "version=$TAG" >> $GITHUB_OUTPUT
+
+          if [[ "$TAG" == *"-"* ]]; then
+            echo "is_prerelease=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_prerelease=false" >> $GITHUB_OUTPUT
+          fi
+
+          echo "📦 Version: $TAG"
+          echo "🏷️ Pre-release: $([[ "$TAG" == *"-"* ]] && echo "yes" || echo "no")"
+
+  test:
+    name: Run Tests
+    needs: validate
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: lalaz_test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: lalaz_test
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: mbstring, openssl, redis, pdo_mysql, pdo_pgsql
+          coverage: none
+
+      - name: Test all packages
+        run: |
+          for package in packages/*/; do
+            echo "🧪 Testing $package"
+            cd "$package"
+            composer install --prefer-dist --no-progress --quiet
+            vendor/bin/phpunit --no-coverage
+            cd ../..
+          done
+        env:
+          DB_MYSQL_HOST: 127.0.0.1
+          DB_MYSQL_DATABASE: lalaz_test
+          DB_MYSQL_USERNAME: root
+          DB_MYSQL_PASSWORD: password
+          DB_PGSQL_HOST: 127.0.0.1
+          DB_PGSQL_DATABASE: lalaz_test
+          DB_PGSQL_USERNAME: postgres
+          DB_PGSQL_PASSWORD: password
+
+  release:
+    name: Create GitHub Release
+    needs: [validate, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          PREV_TAG=$(git tag -l 'v*' --sort=-v:refname | head -2 | tail -1)
+
+          if [ -n "$PREV_TAG" ] && [ "$PREV_TAG" != "$GITHUB_REF_NAME" ]; then
+            echo "📋 Generating changelog from $PREV_TAG to HEAD"
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" ${PREV_TAG}..HEAD --no-merges)
+          else
+            echo "📋 Generating initial changelog"
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" --no-merges | head -50)
+          fi
+
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Lalaz ${{ needs.validate.outputs.version }}"
+          body: |
+            ## 🚀 Lalaz ${{ needs.validate.outputs.version }}
+
+            ${{ needs.validate.outputs.is_prerelease == 'true' && '⚠️ **This is a pre-release version.** Use with caution in production.' || '✅ **Stable release.**' }}
+
+            ### 📦 Installation
+
+            ```bash
+            composer require lalaz/framework:^${{ needs.validate.outputs.version }}
+            ```
+
+            ### 📝 Changes
+
+            ${{ steps.changelog.outputs.changelog }}
+
+            ### 📚 Documentation
+
+            - [Getting Started](https://docs.lalaz.dev/start-here/getting-started)
+            - [What is Lalaz](https://docs.lalaz.dev/start-here/what-is-lalaz)
+
+          prerelease: ${{ needs.validate.outputs.is_prerelease == 'true' }}
+          generate_release_notes: true

@@ -1,0 +1,35 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - phpstan-baseline.neon
+
+parameters:
+    level: 6
+
+    paths:
+        - packages/auth/src
+        - packages/cache/src
+        - packages/database/src
+        - packages/events/src
+        - packages/framework/src
+        - packages/orm/src
+        - packages/queue/src
+        - packages/reactive/src
+        - packages/scheduler/src
+        - packages/storage/src
+        - packages/validator/src
+        - packages/waf/src
+        - packages/web/src
+        - packages/wire/src
+
+    excludePaths:
+        - */vendor/*
+        - */tests/*
+
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        # Allow dynamic method calls for testing
+        - '#Call to an undefined method#'
+
+    # parallel:
+    #     maximumNumberOfProcesses: 4

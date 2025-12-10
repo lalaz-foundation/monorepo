@@ -1,0 +1,9 @@
+{
+    "name": "lalaz/validator",
+    "description": "Fluent validation engine with 40+ built-in rules and custom validators.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Validator\\ValidationServiceProvider",
+    "uninstall": {
+        "keep_config": true
+    }
+}

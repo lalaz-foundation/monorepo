@@ -1,0 +1,16 @@
+{
+    "name": "lalaz/events",
+    "description": "Event dispatcher with listeners, subscribers, and async queue support.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Events\\EventServiceProvider",
+    "install": {
+        "config": {
+            "stub": "config/events.php",
+            "destination": "config/events.php",
+            "overwrite": false
+        }
+    },
+    "uninstall": {
+        "keep_config": true
+    }
+}

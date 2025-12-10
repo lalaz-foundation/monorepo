@@ -1,0 +1,18 @@
+{
+    "name": "lalaz/scheduler",
+    "version": "1.0.0",
+    "description": "Task scheduling for Lalaz applications with cron-like syntax",
+    "provider": "Lalaz\\Scheduler\\SchedulerServiceProvider",
+    "install": {
+        "config": {
+            "stub": "config/scheduler.php",
+            "destination": "config/scheduler.php",
+            "overwrite": false
+        },
+        "env": [
+            "SCHEDULE_TIMEZONE",
+            "SCHEDULE_MODE"
+        ],
+        "message": "Scheduler installed!\n\nNext steps:\n1. Define tasks in config/scheduler.php\n2. Add to your crontab:\n   * * * * * cd /path/to/app && php lalaz schedule:run >> /dev/null 2>&1\n3. View tasks: php lalaz schedule:list\n4. Test a task: php lalaz schedule:test {task-name}"
+    }
+}

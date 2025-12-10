@@ -1,0 +1,21 @@
+{
+    "name": "lalaz/auth",
+    "description": "Authentication and authorization with JWT, sessions, API keys, and RBAC.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Auth\\AuthServiceProvider",
+    "install": {
+        "config": {
+            "stub": "config/auth.php",
+            "destination": "config/auth.php",
+            "overwrite": false
+        },
+        "env": [
+            "APP_KEY",
+            "JWT_SECRET",
+            "JWT_EXPIRATION"
+        ]
+    },
+    "uninstall": {
+        "keep_config": true
+    }
+}

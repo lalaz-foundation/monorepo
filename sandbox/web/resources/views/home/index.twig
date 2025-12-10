@@ -1,0 +1,91 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+<section class="text-center" style="padding: 5rem 0 4rem;">
+    <div class="badge" style="margin-bottom: 1.5rem;">
+        🚀 v1.0 is here
+    </div>
+
+    <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;">
+        The PHP Framework<br>
+        for <span class="text-gradient">Modern Web</span>
+    </h1>
+
+    <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.7;">
+        Build fast, secure, and elegant applications with the power of modern PHP. No complexity, no overhead.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://docs.lalaz.dev" class="btn btn-primary">
+            Get Started →
+        </a>
+        <a href="https://github.com/lalaz-foundation/lalaz" class="btn btn-secondary">
+            ★ View on GitHub
+        </a>
+    </div>
+</section>
+
+<section style="padding: 4rem 0;">
+    <div class="grid grid-3">
+        <div class="card">
+            <div style="width: 40px; height: 40px; background: rgba(34, 197, 94, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">⚡</span>
+            </div>
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Blazing Fast</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Route resolution in 0.02ms on average. Built for production, 50% less overhead.
+            </p>
+        </div>
+
+        <div class="card">
+            <div style="width: 40px; height: 40px; background: rgba(168, 85, 247, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">🔒</span>
+            </div>
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Secure by Default</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                CSRF protection, input validation, XSS security — all baked in from day one.
+            </p>
+        </div>
+
+        <div class="card">
+            <div style="width: 40px; height: 40px; background: rgba(59, 130, 246, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">🎯</span>
+            </div>
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Type Safe</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Full PHP 8.3+ support with strict types and modern syntax.
+            </p>
+        </div>
+
+        <div class="card">
+            <div style="width: 40px; height: 40px; background: rgba(234, 179, 8, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">🗄️</span>
+            </div>
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Database First</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Query builder + migrations + connection pooling to make data access seamless.
+            </p>
+        </div>
+
+        <div class="card">
+            <div style="width: 40px; height: 40px; background: rgba(236, 72, 153, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">⏰</span>
+            </div>
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Background Jobs</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Dispatch jobs in queues with redis, SQS, and event-driven processing.
+            </p>
+        </div>
+
+        <div class="card">
+            <div style="width: 40px; height: 40px; background: rgba(20, 184, 166, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">🛠️</span>
+            </div>
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">CLI Tools</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                CLI commands for generators, migrations, and development.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

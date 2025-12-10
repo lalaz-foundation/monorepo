@@ -1,0 +1,17 @@
+{
+    "name": "lalaz/queue",
+    "description": "Background job processing with database, Redis, and sync drivers.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Queue\\QueueServiceProvider",
+    "install": {
+        "config": {
+            "stub": "config/queue.php",
+            "destination": "config/queue.php",
+            "overwrite": false
+        },
+        "migrations": "migrations"
+    },
+    "uninstall": {
+        "keep_config": false
+    }
+}

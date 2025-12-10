@@ -1,0 +1,19 @@
+{
+    "name": "lalaz/reactive",
+    "description": "Interactive UI components with server-side state - no JavaScript required.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Reactive\\ReactiveServiceProvider",
+    "install": {
+        "assets": {
+            "source": "resources",
+            "destination": "public/vendor/lalaz/reactive",
+            "overwrite": false
+        }
+    },
+    "post_install": {
+        "message": "Lalaz Reactive installed successfully!\n\nNext steps:\n1. Add to your layout: {{ reactiveScripts() }}\n2. Create your first component: php lalaz craft:reactive Counter\n3. Use in your views: {{ reactive('counter') }}\n\nDocumentation: https://lalaz.dev/docs/reactive"
+    },
+    "uninstall": {
+        "keep_config": false
+    }
+}

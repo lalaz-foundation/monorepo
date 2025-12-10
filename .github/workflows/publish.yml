@@ -1,0 +1,184 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish (e.g., 1.0.0)'
+        required: true
+        type: string
+
+env:
+  PHP_VERSION: '8.3'
+
+jobs:
+  # ============================================
+  # Job 1: Publish packages to Packagist
+  # ============================================
+  packagist:
+    name: Notify Packagist
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Packagist secrets
+        id: check_secrets
+        run: |
+          if [ -z "${{ secrets.PACKAGIST_USERNAME }}" ] || [ -z "${{ secrets.PACKAGIST_TOKEN }}" ]; then
+            echo "⚠️ Packagist secrets not configured. Skipping..."
+            echo "has_secrets=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_secrets=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Trigger Packagist update
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        run: |
+          echo "📦 Notifying Packagist..."
+
+          curl -XPOST -H'content-type:application/json' \
+            "https://packagist.org/api/update-package?username=${{ secrets.PACKAGIST_USERNAME }}&apiToken=${{ secrets.PACKAGIST_TOKEN }}" \
+            -d'{"repository":{"url":"https://github.com/lalaz-foundation/lalaz"}}'
+
+          echo "✅ Packagist notified successfully"
+
+  # ============================================
+  # Job 2: Publish packages (Split)
+  # ============================================
+  packages:
+    name: Publish Packages
+    runs-on: ubuntu-latest
+    needs: [packagist]
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - app
+          - auth
+          - cache
+          - database
+          - events
+          - framework
+          - orm
+          - queue
+          - reactive
+          - scheduler
+          - storage
+          - testing
+          - validator
+          - waf
+          - web
+          - wire
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            VERSION="${{ github.event.release.tag_name }}"
+            VERSION="${VERSION#v}"
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "📦 Publishing version: $VERSION"
+
+      - name: Check secrets
+        id: check_secrets
+        run: |
+          if [ -z "${{ secrets.STARTER_TOKEN }}" ]; then
+            echo "⚠️ STARTER_TOKEN not configured. Skipping package split..."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Prepare package
+        if: steps.check_secrets.outputs.skip != 'true'
+        run: |
+          cd packages/${{ matrix.package }}
+
+          # Update dependencies, remove repositories and version (let tags handle version)
+          if [ -f composer.json ]; then
+            jq 'del(.repositories) | del(.version) | if .require then .require |= with_entries(if .key | startswith("lalaz/") then .value = "^${{ steps.version.outputs.version }}" else . end) else . end' \
+              composer.json > composer.tmp.json
+            mv composer.tmp.json composer.json
+          fi
+
+          # Clean dev files
+          rm -rf vendor .phpunit.cache composer.lock
+
+          echo "📦 Prepared ${{ matrix.package }}:"
+          cat composer.json
+
+      - name: Push to package repository
+        if: steps.check_secrets.outputs.skip != 'true'
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.STARTER_TOKEN }}
+        with:
+          source-directory: 'packages/${{ matrix.package }}'
+          destination-github-username: 'lalaz-foundation'
+          destination-repository-name: '${{ matrix.package }}'
+          target-branch: main
+          commit-message: 'Release v${{ steps.version.outputs.version }}'
+
+      - name: Create tag on package repo
+        if: steps.check_secrets.outputs.skip != 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.STARTER_TOKEN }}
+          script: |
+            try {
+              const { data: ref } = await github.rest.git.getRef({
+                owner: 'lalaz-foundation',
+                repo: '${{ matrix.package }}',
+                ref: 'heads/main'
+              });
+
+              await github.rest.git.createRef({
+                owner: 'lalaz-foundation',
+                repo: '${{ matrix.package }}',
+                ref: 'refs/tags/v${{ steps.version.outputs.version }}',
+                sha: ref.object.sha
+              });
+              console.log('✅ Tag v${{ steps.version.outputs.version }} created on ${{ matrix.package }}');
+            } catch (error) {
+              console.log('⚠️ Could not create tag:', error.message);
+            }
+
+  # ============================================
+  # Job 3: Summary
+  # ============================================
+  summary:
+    name: Publish Summary
+    needs: [packagist, packages]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Generate summary
+        run: |
+          echo "## 📦 Publish Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "**Version:** v${{ inputs.version }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Version:** ${{ github.event.release.tag_name }}" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "### Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Target | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Packagist | ${{ needs.packagist.result == 'success' && '✅' || '⚠️' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Packages | ${{ needs.packages.result == 'success' && '✅' || '⚠️' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "1. Verify package on [Packagist](https://packagist.org/packages/lalaz/framework)" >> $GITHUB_STEP_SUMMARY
+          echo "2. Test installation: \`composer require lalaz/framework\`" >> $GITHUB_STEP_SUMMARY
+          echo "3. Announce release on social media" >> $GITHUB_STEP_SUMMARY

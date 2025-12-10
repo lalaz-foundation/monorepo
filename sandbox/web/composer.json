@@ -1,0 +1,42 @@
+{
+    "name": "lalaz/web-starter",
+    "description": "Lalaz Web - Full-stack web application starter with Twig templates",
+    "type": "project",
+    "license": "MIT",
+    "keywords": ["lalaz", "web", "php", "framework", "twig", "mvc"],
+    "version": "1.0.0-rc.1",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../packages/framework",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../packages/web",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "lalaz/framework": "@dev",
+        "lalaz/web": "@dev",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

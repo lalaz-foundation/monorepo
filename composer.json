@@ -1,0 +1,118 @@
+{
+    "name": "lalaz/monorepo",
+    "description": "Lalaz Framework - A modern PHP framework for building web applications",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lalaz Foundation",
+            "email": "dev@lalaz.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "lalaz/auth": "*",
+        "lalaz/cache": "*",
+        "lalaz/database": "*",
+        "lalaz/events": "*",
+        "lalaz/framework": "*",
+        "lalaz/orm": "*",
+        "lalaz/queue": "*",
+        "lalaz/reactive": "*",
+        "lalaz/scheduler": "*",
+        "lalaz/storage": "*",
+        "lalaz/testing": "*",
+        "lalaz/validator": "*",
+        "lalaz/waf": "*",
+        "lalaz/web": "*",
+        "lalaz/wire": "*",
+        "symfony/console": "^7.0",
+        "symfony/event-dispatcher": "^7.0",
+        "symfony/filesystem": "^7.0",
+        "symfony/finder": "^7.0",
+        "symfony/options-resolver": "^7.0",
+        "symfony/process": "^7.0",
+        "symfony/stopwatch": "^7.0",
+        "symfony/string": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.40",
+        "symplify/monorepo-builder": "^11.2",
+        "predis/predis": "^2.0",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Auth\\Tests\\": "packages/auth/tests/",
+            "Lalaz\\Cache\\Tests\\": "packages/cache/tests/",
+            "Lalaz\\Database\\Tests\\": "packages/database/tests/",
+            "Lalaz\\Events\\Tests\\": "packages/events/tests/",
+            "Lalaz\\Framework\\Tests\\": "packages/framework/tests/",
+            "Lalaz\\Orm\\Tests\\": "packages/orm/tests/",
+            "Lalaz\\Queue\\Tests\\": "packages/queue/tests/",
+            "Lalaz\\Reactive\\Tests\\": "packages/reactive/tests/",
+            "Lalaz\\Scheduler\\Tests\\": "packages/scheduler/tests/",
+            "Lalaz\\Storage\\Tests\\": "packages/storage/tests/",
+            "Lalaz\\Testing\\Tests\\": "packages/testing/tests/",
+            "Lalaz\\Validator\\Tests\\": "packages/validator/tests/",
+            "Lalaz\\Waf\\Tests\\": "packages/waf/tests/",
+            "Lalaz\\Web\\Tests\\": "packages/web/tests/",
+            "Lalaz\\Wire\\Tests\\": "packages/wire/tests/"
+        },
+        "files": [
+            "packages/database/tests/Unit/helpers.php",
+            "packages/orm/tests/Unit/helpers.php",
+            "packages/orm/tests/Integration/helpers.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "test:auth": "cd packages/auth && vendor/bin/phpunit",
+        "test:cache": "cd packages/cache && vendor/bin/phpunit",
+        "test:database": "cd packages/database && vendor/bin/phpunit",
+        "test:events": "cd packages/events && vendor/bin/phpunit",
+        "test:framework": "cd packages/framework && vendor/bin/phpunit",
+        "test:orm": "cd packages/orm && vendor/bin/phpunit",
+        "test:queue": "cd packages/queue && vendor/bin/phpunit",
+        "test:reactive": "cd packages/reactive && vendor/bin/phpunit",
+        "test:scheduler": "cd packages/scheduler && vendor/bin/phpunit",
+        "test:storage": "cd packages/storage && vendor/bin/phpunit",
+        "test:validator": "cd packages/validator && vendor/bin/phpunit",
+        "test:waf": "cd packages/waf && vendor/bin/phpunit",
+        "test:web": "cd packages/web && vendor/bin/phpunit",
+        "test:wire": "cd packages/wire && vendor/bin/phpunit",
+        "test:coverage": "phpunit --coverage-html coverage",
+        "lint": "php-cs-fixer fix --dry-run --diff",
+        "lint:fix": "php-cs-fixer fix",
+        "analyze": "phpstan analyse",
+        "check": [
+            "@lint",
+            "@analyze",
+            "@test"
+        ],
+        "docs:dev": "cd docs && npm run docs:dev",
+        "docs:build": "cd docs && npm run docs:build"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

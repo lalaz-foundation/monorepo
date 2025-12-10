@@ -1,0 +1,43 @@
+{
+    "name": "lalaz/testing",
+    "description": "Testing utilities and mini-runtime for Lalaz Framework packages",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "lalaz",
+        "testing",
+        "phpunit",
+        "integration-tests",
+        "test-utilities"
+    ],
+    "authors": [
+        {
+            "name": "Gregory Serrao",
+            "email": "hello@lalaz.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "phpunit/phpunit": "^11.0|^12.0"
+    },
+    "require-dev": {},
+    "suggest": {
+        "lalaz/framework": "Enables full integration test features with DI container and service providers"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Testing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Testing\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "version": "1.0.0-rc.1"
+}

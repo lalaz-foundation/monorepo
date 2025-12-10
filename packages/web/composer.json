@@ -1,0 +1,46 @@
+{
+    "name": "lalaz/web",
+    "description": "Views, templates, sessions, CSRF protection, and rendering utilities.",
+    "version": "1.0.0-rc.1",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "lalaz/framework": "@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0",
+        "twig/twig": "^3.0"
+    },
+    "suggest": {
+        "twig/twig": "Required for using TwigEngine (^3.0)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Web\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Web\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "lalaz": {
+            "providers": [
+                "Lalaz\\Web\\WebServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

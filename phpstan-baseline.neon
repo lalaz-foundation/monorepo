@@ -1,0 +1,2661 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Lalaz\\\\Cache\\\\CacheManager\\:\\:createFileStore\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cache/src/CacheManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Cache\\\\CacheManager\\:\\:createStore\\(\\) has parameter \\$storeConfig with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cache/src/CacheManager.php
+
+		-
+			message: "#^Variable \\$fp in isset\\(\\) always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/cache/src/Stores/FileStore.php
+
+		-
+			message: "#^Method Lalaz\\\\Cache\\\\Stores\\\\RedisStore\\:\\:__construct\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cache/src/Stores/RedisStore.php
+
+		-
+			message: "#^Method Lalaz\\\\Cache\\\\Stores\\\\RedisStore\\:\\:createPhpRedis\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cache/src/Stores/RedisStore.php
+
+		-
+			message: "#^Method Lalaz\\\\Cache\\\\Stores\\\\RedisStore\\:\\:createPredis\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cache/src/Stores/RedisStore.php
+
+		-
+			message: "#^Parameter \\#2 \\$options of method Predis\\\\ClientInterface\\:\\:scan\\(\\) expects array\\|null, int given\\.$#"
+			count: 1
+			path: packages/cache/src/Stores/RedisStore.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:delete\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:insert\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:prepareAndExecute\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:query\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:runOperation\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:runWithProfile\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:runWithRetry\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:select\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:select\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Connection\\:\\:update\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between PDOStatement and false will always evaluate to true\\.$#"
+			count: 1
+			path: packages/database/src/Connection.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\ConnectionManager\\:\\:__construct\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/ConnectionManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\ConnectionManager\\:\\:__construct\\(\\) has parameter \\$connectors with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/ConnectionManager.php
+
+		-
+			message: "#^Negated boolean expression is always true\\.$#"
+			count: 2
+			path: packages/database/src/ConnectionManager.php
+
+		-
+			message: "#^Property Lalaz\\\\Database\\\\ConnectionManager\\:\\:\\$readMinConnections is never read, only written\\.$#"
+			count: 1
+			path: packages/database/src/ConnectionManager.php
+
+		-
+			message: "#^Property Lalaz\\\\Database\\\\ConnectionManager\\:\\:\\$stickyReads is never read, only written\\.$#"
+			count: 1
+			path: packages/database/src/ConnectionManager.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 2
+			path: packages/database/src/ConnectionManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Console\\\\CraftMigrationCommand\\:\\:arguments\\(\\) should return array\\<int, array\\{name\\: string, description\\: string, optional\\: bool\\}\\> but returns array\\{array\\{name\\: 'name', description\\: 'The migration name …', required\\: true\\}\\}\\.$#"
+			count: 1
+			path: packages/database/src/Console/CraftMigrationCommand.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Console\\\\CraftSeederCommand\\:\\:arguments\\(\\) should return array\\<int, array\\{name\\: string, description\\: string, optional\\: bool\\}\\> but returns array\\{array\\{name\\: 'name', description\\: 'Seeder class name …', required\\: true\\}\\}\\.$#"
+			count: 1
+			path: packages/database/src/Console/CraftSeederCommand.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Contracts\\\\ConnectionInterface\\:\\:delete\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Contracts/ConnectionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Contracts\\\\ConnectionInterface\\:\\:insert\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Contracts/ConnectionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Contracts\\\\ConnectionInterface\\:\\:query\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Contracts/ConnectionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Contracts\\\\ConnectionInterface\\:\\:select\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Contracts/ConnectionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Contracts\\\\ConnectionInterface\\:\\:select\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Contracts/ConnectionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Contracts\\\\ConnectionInterface\\:\\:update\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Contracts/ConnectionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\DatabaseServiceProvider\\:\\:resolveCustomConnectors\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/DatabaseServiceProvider.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 1
+			path: packages/database/src/DatabaseServiceProvider.php
+
+		-
+			message: "#^Variable \\$batch on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/database/src/Migrations/MigrationRepository.php
+
+		-
+			message: "#^Instanceof between object and Lalaz\\\\Database\\\\Migrations\\\\Migration will always evaluate to false\\.$#"
+			count: 1
+			path: packages/database/src/Migrations/Migrator.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: packages/database/src/Migrations/Migrator.php
+
+		-
+			message: "#^Expression on left side of \\?\\? is not nullable\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:columnize\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:compileInsert\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:compileUpdate\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:havingBasic\\(\\) has parameter \\$having with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:havingBetween\\(\\) has parameter \\$having with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:havingNotBetween\\(\\) has parameter \\$having with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:havingNotNull\\(\\) has parameter \\$having with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:havingNull\\(\\) has parameter \\$having with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:havingRaw\\(\\) has parameter \\$having with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereBasic\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereBetween\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereBetweenColumns\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereColumn\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereExists\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereExpression\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereIn\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereInSub\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNested\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNotBetween\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNotBetweenColumns\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNotExists\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNotIn\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNotInSub\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNotNull\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereNull\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\Grammar\\:\\:whereRaw\\(\\) has parameter \\$where with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Variable \\$compiled on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 4
+			path: packages/database/src/Query/Grammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:assertTwoElementArray\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:assertTwoElementArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:compileSubSelect\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:decrement\\(\\) has parameter \\$extra with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:first\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:first\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:fromSub\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:get\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:get\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:havingBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:havingNull\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:havingRaw\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:increment\\(\\) has parameter \\$extra with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:insert\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:insertGetId\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:insertMany\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhere\\(\\) has parameter \\$column with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereColumn\\(\\) has parameter \\$first with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereIn\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereNotBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereNotIn\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereNotNull\\(\\) has parameter \\$column with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orWhereNull\\(\\) has parameter \\$column with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orderByRaw\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:orders\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:pluck\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:selectRaw\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:selectSub\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:unions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:update\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:where\\(\\) has parameter \\$column with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereBetweenColumns\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereColumn\\(\\) has parameter \\$first with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereIn\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereNotBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereNotIn\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereNotNull\\(\\) has parameter \\$column with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereNull\\(\\) has parameter \\$column with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Query\\\\QueryBuilder\\:\\:whereRaw\\(\\) has parameter \\$bindings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Query/QueryBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Blueprint\\:\\:dropIndex\\(\\) has parameter \\$index with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Blueprint.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Blueprint\\:\\:dropUnique\\(\\) has parameter \\$index with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Blueprint.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Blueprint\\:\\:index\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Blueprint.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Blueprint\\:\\:indexName\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Blueprint.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Blueprint\\:\\:unique\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Blueprint.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\MySqlSchemaGrammar\\:\\:compileDropForeign\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/MySqlSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\MySqlSchemaGrammar\\:\\:compileDropIndex\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/MySqlSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\MySqlSchemaGrammar\\:\\:compileModifyColumn\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/MySqlSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\MySqlSchemaGrammar\\:\\:compileRenameColumn\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/MySqlSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\PostgresSchemaGrammar\\:\\:compileDropForeign\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/PostgresSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\PostgresSchemaGrammar\\:\\:compileDropIndex\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/PostgresSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\PostgresSchemaGrammar\\:\\:compileModifyColumn\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/PostgresSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\PostgresSchemaGrammar\\:\\:compileRenameColumn\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/PostgresSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\SchemaGrammar\\:\\:columnize\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/SchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\SqliteSchemaGrammar\\:\\:compileDropIndex\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/SqliteSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\Grammars\\\\SqliteSchemaGrammar\\:\\:compileRenameColumn\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: packages/database/src/Schema/Grammars/SqliteSchemaGrammar.php
+
+		-
+			message: "#^Method Lalaz\\\\Database\\\\Schema\\\\SchemaBuilder\\:\\:indexName\\(\\) has parameter \\$columns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/database/src/Schema/SchemaBuilder.php
+
+		-
+			message: "#^Instanceof between object and Lalaz\\\\Database\\\\Seeding\\\\Seeder will always evaluate to false\\.$#"
+			count: 1
+			path: packages/database/src/Seeding/SeederRunner.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: packages/database/src/Seeding/SeederRunner.php
+
+		-
+			message: "#^Method Lalaz\\\\Events\\\\Drivers\\\\NullDriver\\:\\:getPublicationsOf\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/Drivers/NullDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Events\\\\Drivers\\\\NullDriver\\:\\:getPublished\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/Drivers/NullDriver.php
+
+		-
+			message: "#^Property Lalaz\\\\Events\\\\Drivers\\\\NullDriver\\:\\:\\$published type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/Drivers/NullDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Events\\\\Drivers\\\\QueueDriver\\:\\:dispatchToQueue\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/Drivers/QueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Events\\\\Drivers\\\\SyncDriver\\:\\:handleError\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/Drivers/SyncDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Events\\\\EventJob\\:\\:handle\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/EventJob.php
+
+		-
+			message: "#^Method Lalaz\\\\Events\\\\EventServiceProvider\\:\\:loadListenerFiles\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/events/src/EventServiceProvider.php
+
+		-
+			message: "#^Static property Lalaz\\\\Config\\\\Config\\:\\:\\$instance \\(Lalaz\\\\Config\\\\ConfigRepository\\|null\\) does not accept Lalaz\\\\Config\\\\Contracts\\\\ConfigRepositoryInterface\\|null\\.$#"
+			count: 1
+			path: packages/framework/src/Config/Config.php
+
+		-
+			message: "#^Method Lalaz\\\\Console\\\\Commands\\\\CraftModelCommand\\:\\:arguments\\(\\) should return array\\<int, array\\{name\\: string, description\\: string, optional\\: bool\\}\\> but returns array\\{array\\{name\\: 'name', description\\: 'Model class name \\(e…', required\\: true\\}\\}\\.$#"
+			count: 1
+			path: packages/framework/src/Console/Commands/CraftModelCommand.php
+
+		-
+			message: "#^Method Lalaz\\\\Console\\\\Commands\\\\RoutesInspectCommand\\:\\:describeHandler\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Console/Commands/RoutesInspectCommand.php
+
+		-
+			message: "#^Method Lalaz\\\\Console\\\\Commands\\\\RoutesListCommand\\:\\:describeHandler\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Console/Commands/RoutesListCommand.php
+
+		-
+			message: "#^Method Lalaz\\\\Container\\\\Container\\:\\:build\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Method Lalaz\\\\Container\\\\Container\\:\\:call\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Method Lalaz\\\\Container\\\\Container\\:\\:getReflectionClass\\(\\) return type with generic class ReflectionClass does not specify its types\\: T$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Method Lalaz\\\\Container\\\\Container\\:\\:resolve\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Method Lalaz\\\\Container\\\\Container\\:\\:resolveParameters\\(\\) has parameter \\$primitives with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Method Lalaz\\\\Container\\\\Container\\:\\:resolveParameters\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Property Lalaz\\\\Container\\\\Container\\:\\:\\$parameterCache with generic class Lalaz\\\\Support\\\\Cache\\\\LruCache does not specify its types\\: T$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Property Lalaz\\\\Container\\\\Container\\:\\:\\$reflectionCache with generic class Lalaz\\\\Support\\\\Cache\\\\LruCache does not specify its types\\: T$#"
+			count: 1
+			path: packages/framework/src/Container/Container.php
+
+		-
+			message: "#^Constructor of class Lalaz\\\\Container\\\\Exceptions\\\\ContainerException has an unused parameter \\$code\\.$#"
+			count: 1
+			path: packages/framework/src/Container/Exceptions/ContainerException.php
+
+		-
+			message: "#^Variable \\$content on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/framework/src/Exceptions/ExceptionResponse.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method alert\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method critical\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method debug\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method emergency\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method error\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method info\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method notice\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Class Lalaz\\\\Logging\\\\Log has PHPDoc tag @method for method warning\\(\\) parameter \\#2 \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:alert\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:critical\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:debug\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:emergency\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:error\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:info\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:log\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:notice\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\Log\\:\\:warning\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Log.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\LogServiceProvider\\:\\:getDefaultConfig\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/LogServiceProvider.php
+
+		-
+			message: "#^Method Lalaz\\\\Logging\\\\LogServiceProvider\\:\\:getLoggingConfig\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/LogServiceProvider.php
+
+		-
+			message: "#^Property Lalaz\\\\Logging\\\\Writer\\\\FileWriter\\:\\:\\$formatter is never read, only written\\.$#"
+			count: 1
+			path: packages/framework/src/Logging/Writer/FileWriter.php
+
+		-
+			message: "#^Call to method getComposer\\(\\) on an unknown class Composer\\\\Script\\\\Event\\.$#"
+			count: 1
+			path: packages/framework/src/Packages/ComposerScripts.php
+
+		-
+			message: "#^Call to method getIO\\(\\) on an unknown class Composer\\\\Script\\\\Event\\.$#"
+			count: 1
+			path: packages/framework/src/Packages/ComposerScripts.php
+
+		-
+			message: "#^Offset 1 on array\\{list\\<string\\>, list\\<non\\-empty\\-string\\>\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/framework/src/Packages/ComposerScripts.php
+
+		-
+			message: "#^Parameter \\$event of method Lalaz\\\\Packages\\\\ComposerScripts\\:\\:postAutoloadDump\\(\\) has invalid type Composer\\\\Script\\\\Event\\.$#"
+			count: 2
+			path: packages/framework/src/Packages/ComposerScripts.php
+
+		-
+			message: "#^Template type T of method Lalaz\\\\Runtime\\\\Application\\:\\:resolve\\(\\) is not referenced in a parameter\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Application.php
+
+		-
+			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/ApplicationBootstrap.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:any\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:delete\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:get\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:post\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:put\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Parameter \\#1 \\$container of class Lalaz\\\\Container\\\\Middlewares\\\\ScopedContainerMiddleware constructor expects Lalaz\\\\Container\\\\Container, Lalaz\\\\Container\\\\Contracts\\\\ContainerInterface given\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Parameter \\#1 \\$request of method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:handle\\(\\) expects Lalaz\\\\Web\\\\Http\\\\Request\\|null, Lalaz\\\\Web\\\\Http\\\\Contracts\\\\RequestInterface given\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Parameter \\#1 \\$request of method Lalaz\\\\Runtime\\\\Http\\\\HttpKernel\\:\\:handle\\(\\) expects Lalaz\\\\Web\\\\Http\\\\Request, Lalaz\\\\Web\\\\Http\\\\Contracts\\\\RequestInterface given\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Parameter \\#2 \\$response of method Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:handle\\(\\) expects Lalaz\\\\Web\\\\Http\\\\Response\\|null, Lalaz\\\\Web\\\\Http\\\\Contracts\\\\ResponseInterface given\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Parameter \\#2 \\$response of method Lalaz\\\\Runtime\\\\Http\\\\HttpKernel\\:\\:handle\\(\\) expects Lalaz\\\\Web\\\\Http\\\\Response, Lalaz\\\\Web\\\\Http\\\\Contracts\\\\ResponseInterface given\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Property Lalaz\\\\Runtime\\\\Http\\\\HttpApplication\\:\\:\\$providersBooted is never read, only written\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpApplication.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpKernel\\:\\:getHandlerName\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpKernel.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpKernel\\:\\:normalizeHandler\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpKernel.php
+
+		-
+			message: "#^Method Lalaz\\\\Runtime\\\\Http\\\\HttpKernel\\:\\:normalizeHandler\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpKernel.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/HttpKernel.php
+
+		-
+			message: "#^Call to function is_string\\(\\) with class\\-string will always evaluate to true\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/RoutingConfigurator.php
+
+		-
+			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/RoutingConfigurator.php
+
+		-
+			message: "#^Parameter \\#1 \\$container of class Lalaz\\\\Container\\\\Middlewares\\\\ScopedContainerMiddleware constructor expects Lalaz\\\\Container\\\\Container, Lalaz\\\\Container\\\\Contracts\\\\ContainerInterface given\\.$#"
+			count: 1
+			path: packages/framework/src/Runtime/Http/ServiceBootstrapper.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Cache\\\\PhpArrayCache\\:\\:load\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Cache/PhpArrayCache.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Cache\\\\PhpArrayCache\\:\\:save\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Cache/PhpArrayCache.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:combine\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:countBy\\(\\) should return static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<\\(int\\|string\\), int\\>\\) but returns static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<\\(int\\|string\\), int\\<1, max\\>\\>\\)\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:diff\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:diffAssoc\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:diffKeys\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:filter\\(\\) should return static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<TKey of \\(int\\|string\\), TValue\\>\\) but returns static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<TKey of \\(int\\|string\\), TValue of mixed\\>\\)\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:flattenArray\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:flattenArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:groupBy\\(\\) should return static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<\\(int\\|string\\), static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<TKey of \\(int\\|string\\), TValue\\>\\)\\>\\) but returns static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<\\(int\\|string\\), static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<\\*NEVER\\*, \\*NEVER\\*\\>\\)\\>\\)\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:intersect\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:intersectByKeys\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:merge\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:mergeRecursive\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:mode\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:pluckValues\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:reduceSpread\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:replace\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:replaceRecursive\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:union\\(\\) has parameter \\$items with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:whereBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:whereIn\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:whereInStrict\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:whereNotBetween\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:whereNotIn\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Method Lalaz\\\\Support\\\\Collections\\\\Collection\\:\\:whereNotInStrict\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$callback with type mixed is not subtype of native type bool\\|\\(callable\\)\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$callback$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Type mixed in generic type static\\(Lalaz\\\\Support\\\\Collections\\\\Collection\\<mixed, \\(int\\|string\\)\\>\\) in PHPDoc tag @return is not subtype of template type TKey of \\(int\\|string\\) of class Lalaz\\\\Support\\\\Collections\\\\Collection\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 60
+			path: packages/framework/src/Support/Collections/Collection.php
+
+		-
+			message: "#^Function data_fill\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Function data_forget\\(\\) has parameter \\$keys with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Function data_get\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Function data_set\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Function head\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Function last\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Template type TKey of function collect\\(\\) is not referenced in a parameter\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Template type TValue of function collect\\(\\) is not referenced in a parameter\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/collections.php
+
+		-
+			message: "#^Function resolve\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/container.php
+
+		-
+			message: "#^Call to an undefined static method Lalaz\\\\Logging\\\\Log\\:\\:getFacadeRoot\\(\\)\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function alert\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function critical\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function debug\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function emergency\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function error\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function info\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function logger\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function notice\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Function warning\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Support/Functions/logging.php
+
+		-
+			message: "#^Variable \\$_COOKIE on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Http/Request.php
+
+		-
+			message: "#^Variable \\$_FILES on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Http/Request.php
+
+		-
+			message: "#^Variable \\$_GET on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Http/Request.php
+
+		-
+			message: "#^Variable \\$_POST on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Http/Request.php
+
+		-
+			message: "#^Variable \\$_SERVER on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 2
+			path: packages/framework/src/Web/Http/Request.php
+
+		-
+			message: "#^Comparison operation \"\\>\\=\" between int\\<0, max\\> and 0 is always true\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Http/Response.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:any\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:any\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:delete\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:delete\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:get\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:get\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:group\\(\\) has parameter \\$attributes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:head\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:head\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:methods\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:methods\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:options\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:options\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:patch\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:patch\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:post\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:post\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:put\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:put\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:resource\\(\\) has parameter \\$controller with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:route\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Contracts\\\\RouterInterface\\:\\:route\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Contracts/RouterInterface.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with array\\<string, mixed\\> will always evaluate to true\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Registrars/ControllerDiscoveryRegistrar.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Registrars\\\\ControllerDiscoveryRegistrar\\:\\:discoverControllers\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Registrars/ControllerDiscoveryRegistrar.php
+
+		-
+			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Registrars/RouteFileRegistrar.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:any\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:any\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:delete\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:delete\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:get\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:get\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:group\\(\\) has parameter \\$attributes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:head\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:head\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:methods\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:options\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:options\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:patch\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:patch\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:post\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:post\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:put\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:put\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:resource\\(\\) has parameter \\$controller with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Routing\\\\Router\\:\\:route\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Offset 'splat' on array\\<int, array\\<string, array\\<int, Lalaz\\\\Web\\\\Routing\\\\RouteDefinition\\>\\>\\> in isset\\(\\) does not exist\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Offset 'splat' on non\\-empty\\-array\\<int, array\\<string, array\\<int, Lalaz\\\\Web\\\\Routing\\\\RouteDefinition\\>\\>\\> in isset\\(\\) does not exist\\.$#"
+			count: 1
+			path: packages/framework/src/Web/Routing/Router.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Exceptions\\\\MassAssignmentException\\:\\:becauseNotFillable\\(\\) has parameter \\$fillable with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Exceptions/MassAssignmentException.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Exceptions\\\\MassAssignmentException\\:\\:becauseNotFillable\\(\\) has parameter \\$guarded with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Exceptions/MassAssignmentException.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Exceptions\\\\RelationNotFoundException\\:\\:forRelation\\(\\) has parameter \\$available with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Exceptions/RelationNotFoundException.php
+
+		-
+			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
+			count: 2
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with \\$this\\(Lalaz\\\\Orm\\\\Model\\) and 'getRelations' will always evaluate to true\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with \\$this\\(Lalaz\\\\Orm\\\\Model\\) and 'tableName' will always evaluate to true\\.$#"
+			count: 2
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Model\\:\\:all\\(\\) should return array\\<int, static\\(Lalaz\\\\Orm\\\\Model\\)\\> but returns array\\<int, Lalaz\\\\Orm\\\\Model\\>\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Model\\:\\:find\\(\\) should return static\\(Lalaz\\\\Orm\\\\Model\\)\\|null but returns Lalaz\\\\Orm\\\\Model\\|null\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Model\\:\\:findOrFail\\(\\) should return static\\(Lalaz\\\\Orm\\\\Model\\) but returns Lalaz\\\\Orm\\\\Model\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Model\\:\\:getCast\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$attributes$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between string and null will always evaluate to true\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 3
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Variable \\$ownerKey on left side of \\?\\?\\= always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/orm/src/Model.php
+
+		-
+			message: "#^Call to function is_int\\(\\) with int will always evaluate to true\\.$#"
+			count: 2
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Instanceof between string and Closure will always evaluate to false\\.$#"
+			count: 1
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Query\\\\ModelQuery\\:\\:__call\\(\\) has parameter \\$arguments with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Query\\\\ModelQuery\\:\\:withoutGlobalScopes\\(\\) has parameter \\$scopes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Property Lalaz\\\\Orm\\\\Query\\\\ModelQuery\\:\\:\\$applyGlobalScopes is never read, only written\\.$#"
+			count: 1
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between string and null will always evaluate to true\\.$#"
+			count: 1
+			path: packages/orm/src/Query/ModelQuery.php
+
+		-
+			message: "#^Method Lalaz\\\\Orm\\\\Relations\\\\BelongsToMany\\:\\:__construct\\(\\) has parameter \\$pivotColumns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/orm/src/Relations/BelongsToMany.php
+
+		-
+			message: "#^Parameter \\#1 \\$ids of method Lalaz\\\\Orm\\\\Relations\\\\BelongsToMany\\:\\:attach\\(\\) expects array\\<int, mixed\\>\\|int\\|string, array\\<string, array\\<string, mixed\\>\\> given\\.$#"
+			count: 1
+			path: packages/orm/src/Relations/BelongsToMany.php
+
+		-
+			message: "#^Property Lalaz\\\\Orm\\\\Testing\\\\Factory\\:\\:\\$manager is never read, only written\\.$#"
+			count: 1
+			path: packages/orm/src/Testing/Factory.php
+
+		-
+			message: "#^Property Lalaz\\\\Orm\\\\Testing\\\\Factory\\:\\:\\$modelClass is never read, only written\\.$#"
+			count: 1
+			path: packages/orm/src/Testing/Factory.php
+
+		-
+			message: "#^Trait Lalaz\\\\Orm\\\\Traits\\\\HasTenantScope is used zero times and is not analysed\\.$#"
+			count: 1
+			path: packages/orm/src/Traits/HasTenantScope.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Commands\\\\QueueMaintenanceCommand\\:\\:runAll\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Commands/QueueMaintenanceCommand.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\FailedJobsInterface\\:\\:getFailedJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/FailedJobsInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\FailedJobsInterface\\:\\:getFailedJobs\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/FailedJobsInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\JobDispatcherInterface\\:\\:add\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/JobDispatcherInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\JobDispatcherInterface\\:\\:add\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/JobDispatcherInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\JobExecutorInterface\\:\\:execute\\(\\) has parameter \\$job with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/JobExecutorInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\JobExecutorInterface\\:\\:executeSync\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/JobExecutorInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\JobInterface\\:\\:handle\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/JobInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\JobProcessorInterface\\:\\:processBatch\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/JobProcessorInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\QueueLoggerInterface\\:\\:debug\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/QueueLoggerInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\QueueLoggerInterface\\:\\:error\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/QueueLoggerInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\QueueLoggerInterface\\:\\:info\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/QueueLoggerInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\QueueLoggerInterface\\:\\:warning\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/QueueLoggerInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Contracts\\\\QueueStatsInterface\\:\\:getStats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Contracts/QueueStatsInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:add\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:add\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:claimNextJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:executeJob\\(\\) has parameter \\$job with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:getFailedJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:getFailedJobs\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:getRetryHistory\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:getStats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:handleJobFailure\\(\\) has parameter \\$job with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:moveToDeadLetterQueue\\(\\) has parameter \\$job with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\AbstractDatabaseQueueDriver\\:\\:processBatch\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/AbstractDatabaseQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:add\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:add\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:all\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:getFailedJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:getFailedJobs\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:getStats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:processBatch\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Property Lalaz\\\\Queue\\\\Drivers\\\\InMemoryQueueDriver\\:\\:\\$queue type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/InMemoryQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\MySQLQueueDriver\\:\\:claimNextJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/MySQLQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\PostgresQueueDriver\\:\\:claimNextJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/PostgresQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\SQLiteQueueDriver\\:\\:claimJobWithReturning\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/SQLiteQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\SQLiteQueueDriver\\:\\:claimJobWithTransaction\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/SQLiteQueueDriver.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Drivers\\\\SQLiteQueueDriver\\:\\:claimNextJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Drivers/SQLiteQueueDriver.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with static\\(Lalaz\\\\Queue\\\\Job\\) and 'handle' will always evaluate to true\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Instanceof between Lalaz\\\\Queue\\\\Contracts\\\\JobDispatcherInterface and Lalaz\\\\Queue\\\\Contracts\\\\JobDispatcherInterface will always evaluate to true\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Instanceof between static\\(Lalaz\\\\Queue\\\\Job\\) and Lalaz\\\\Queue\\\\Contracts\\\\JobInterface will always evaluate to true\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Job\\:\\:dispatch\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Job\\:\\:dispatchSync\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Property Lalaz\\\\Queue\\\\Job\\:\\:\\$tags type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unknown parameter \\$delay in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unknown parameter \\$jobClass in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unknown parameter \\$options in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unknown parameter \\$payload in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unknown parameter \\$priority in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unknown parameter \\$queue in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 2
+			path: packages/queue/src/Job.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with Lalaz\\\\Queue\\\\Contracts\\\\JobInterface and 'handle' will always evaluate to true\\.$#"
+			count: 1
+			path: packages/queue/src/JobExecutor.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\JobExecutor\\:\\:decodePayload\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/JobExecutor.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\JobExecutor\\:\\:execute\\(\\) has parameter \\$job with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/JobExecutor.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\JobExecutor\\:\\:executeSync\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/JobExecutor.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\JobExecutor\\:\\:log\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/JobExecutor.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Jobs\\:\\:batch\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Jobs.php
+
+		-
+			message: "#^Call to an undefined static method Lalaz\\\\Support\\\\Errors\\:\\:throwNotSupported\\(\\)\\.$#"
+			count: 6
+			path: packages/queue/src/Migrations/QueueMigration.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\Migrations\\\\QueueMigration\\:\\:getTableColumns\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/Migrations/QueueMigration.php
+
+		-
+			message: "#^Instanceof between Lalaz\\\\Queue\\\\Contracts\\\\JobDispatcherInterface and Lalaz\\\\Queue\\\\Contracts\\\\JobDispatcherInterface will always evaluate to true\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\PendingDispatch\\:\\:dispatch\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\PendingDispatch\\:\\:tags\\(\\) has parameter \\$tags with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\PendingDispatch\\:\\:withOptions\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Property Lalaz\\\\Queue\\\\PendingDispatch\\:\\:\\$options type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Unknown parameter \\$delay in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Unknown parameter \\$jobClass in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Unknown parameter \\$options in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Unknown parameter \\$payload in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Unknown parameter \\$priority in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Unknown parameter \\$queue in call to method stdClass\\:\\:addJob\\(\\)\\.$#"
+			count: 1
+			path: packages/queue/src/PendingDispatch.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:debug\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:error\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:formatMessage\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:getJobLogs\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:getLogsByLevel\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:info\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:log\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:logToDatabase\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:outputToConsole\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueLogger\\:\\:warning\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueLogger.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with Lalaz\\\\Queue\\\\Contracts\\\\JobInterface and 'handle' will always evaluate to true\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:add\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:add\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:addJob\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:addJob\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:executeSynchronously\\(\\) has parameter \\$payload with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:getFailedJob\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:getFailedJobs\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:getStats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\QueueManager\\:\\:processBatch\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/QueueManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Queue\\\\RetryStrategy\\:\\:getRetrySchedule\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/queue/src/RetryStrategy.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:executeComponentMethod\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:handleListenerCall\\(\\) has parameter \\$requestData with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:restoreComponent\\(\\) has parameter \\$state with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:validateCallRequest\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:validateCallRequest\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:validateUpdateRequest\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\Http\\\\ReactiveController\\:\\:validateUpdateRequest\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Http/ReactiveController.php
+
+		-
+			message: "#^Access to private property Lalaz\\\\Runtime\\\\Application\\:\\:\\$container\\.$#"
+			count: 2
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Call to method errors\\(\\) on an unknown class Lalaz\\\\Validation\\\\Validator\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Call to method fails\\(\\) on an unknown class Lalaz\\\\Validation\\\\Validator\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Instantiated class Lalaz\\\\Validation\\\\Validator not found\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:callListener\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:dehydrate\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:dispatch\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:emit\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:getDispatchQueue\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:getErrors\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:getListeners\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:getMountParams\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:getNotifications\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:getPublicProperties\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:hydrate\\(\\) has parameter \\$state with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:inlineView\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:setMountParams\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:validate\\(\\) has parameter \\$messages with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:validate\\(\\) has parameter \\$rules with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:view\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Property Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:\\$dispatchQueue type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Property Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:\\$errors type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Property Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:\\$listeners type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Property Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:\\$mountParams type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Property Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:\\$notifications type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Property Lalaz\\\\Reactive\\\\ReactiveComponent\\:\\:\\$publicProperties type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveComponent.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveManager\\:\\:call\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveManager\\:\\:mount\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveManager\\:\\:restore\\(\\) has parameter \\$state with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveServiceProvider\\:\\:registerRouteIfMissing\\(\\) has parameter \\$handler with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveServiceProvider.php
+
+		-
+			message: "#^Method Lalaz\\\\Reactive\\\\ReactiveServiceProvider\\:\\:registerRouteIfMissing\\(\\) has parameter \\$middlewares with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/ReactiveServiceProvider.php
+
+		-
+			message: "#^Function reactive\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/reactive/src/Support/helpers.php
+
+		-
+			message: "#^Call to method delete\\(\\) on an unknown class Lalaz\\\\Cache\\\\CacheInterface\\.$#"
+			count: 1
+			path: packages/scheduler/src/Mutex/CacheMutex.php
+
+		-
+			message: "#^Call to method has\\(\\) on an unknown class Lalaz\\\\Cache\\\\CacheInterface\\.$#"
+			count: 2
+			path: packages/scheduler/src/Mutex/CacheMutex.php
+
+		-
+			message: "#^Call to method set\\(\\) on an unknown class Lalaz\\\\Cache\\\\CacheInterface\\.$#"
+			count: 1
+			path: packages/scheduler/src/Mutex/CacheMutex.php
+
+		-
+			message: "#^Parameter \\$cache of method Lalaz\\\\Scheduler\\\\Mutex\\\\CacheMutex\\:\\:__construct\\(\\) has invalid type Lalaz\\\\Cache\\\\CacheInterface\\.$#"
+			count: 2
+			path: packages/scheduler/src/Mutex/CacheMutex.php
+
+		-
+			message: "#^Property Lalaz\\\\Scheduler\\\\Mutex\\\\CacheMutex\\:\\:\\$cache has unknown class Lalaz\\\\Cache\\\\CacheInterface as its type\\.$#"
+			count: 2
+			path: packages/scheduler/src/Mutex/CacheMutex.php
+
+		-
+			message: "#^Method Lalaz\\\\Scheduler\\\\Mutex\\\\MutexInterface\\:\\:acquire\\(\\) invoked with 1 parameter, 2 required\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledEvent.php
+
+		-
+			message: "#^Offset 0 on non\\-empty\\-list\\<string\\> on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledEvent.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method Lalaz\\\\Scheduler\\\\Mutex\\\\MutexInterface\\:\\:acquire\\(\\) expects string, \\$this\\(Lalaz\\\\Scheduler\\\\ScheduledEvent\\) given\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledEvent.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method Lalaz\\\\Scheduler\\\\Mutex\\\\MutexInterface\\:\\:release\\(\\) expects string, \\$this\\(Lalaz\\\\Scheduler\\\\ScheduledEvent\\) given\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledEvent.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with null and 'onQueue' will always evaluate to false\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledJob.php
+
+		-
+			message: "#^Parameter \\#1 \\$event of function dispatch expects string, object given\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledJob.php
+
+		-
+			message: "#^Parameter \\#1 \\$object_or_class of function method_exists expects object\\|string, null given\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledJob.php
+
+		-
+			message: "#^Result of function dispatch \\(void\\) is used\\.$#"
+			count: 1
+			path: packages/scheduler/src/ScheduledJob.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with 'App\\\\\\\\Console\\\\\\\\Kernel' and 'schedule' will always evaluate to false\\.$#"
+			count: 1
+			path: packages/scheduler/src/SchedulerServiceProvider.php
+
+		-
+			message: "#^Class Lalaz\\\\Cache\\\\CacheInterface not found\\.$#"
+			count: 2
+			path: packages/scheduler/src/SchedulerServiceProvider.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$cache contains unknown class Lalaz\\\\Cache\\\\CacheInterface\\.$#"
+			count: 1
+			path: packages/scheduler/src/SchedulerServiceProvider.php
+
+		-
+			message: "#^Default value of the parameter \\#1 \\$config \\(array\\{\\}\\) of method Lalaz\\\\Storage\\\\Adapters\\\\LocalStorageAdapter\\:\\:__construct\\(\\) is incompatible with type array\\{path\\: string, public_url\\?\\: string, directory_permissions\\?\\: int, file_permissions\\?\\: int\\}\\.$#"
+			count: 1
+			path: packages/storage/src/Adapters/LocalStorageAdapter.php
+
+		-
+			message: "#^Offset 'path' on array\\{path\\: string, public_url\\?\\: string, directory_permissions\\?\\: int, file_permissions\\?\\: int\\} in isset\\(\\) always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/storage/src/Adapters/LocalStorageAdapter.php
+
+		-
+			message: "#^Class Lalaz\\\\Storage\\\\Storage has PHPDoc tag @method for method directories\\(\\) return type with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/storage/src/Storage.php
+
+		-
+			message: "#^Class Lalaz\\\\Storage\\\\Storage has PHPDoc tag @method for method files\\(\\) return type with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/storage/src/Storage.php
+
+		-
+			message: "#^Trait Lalaz\\\\Validator\\\\Concerns\\\\Validatable is used zero times and is not analysed\\.$#"
+			count: 1
+			path: packages/validator/src/Concerns/Validatable.php
+
+		-
+			message: "#^Parameter &\\$parsedRules by\\-ref type of method Lalaz\\\\Validator\\\\RuleParser\\:\\:attachCustomMessage\\(\\) expects array\\<int, array\\<string, mixed\\>\\|string\\>, array\\<int, array\\<int\\|string, mixed\\>\\|string\\> given\\.$#"
+			count: 1
+			path: packages/validator/src/RuleParser.php
+
+		-
+			message: "#^Strict comparison using \\!\\=\\= between null and null will always evaluate to false\\.$#"
+			count: 2
+			path: packages/validator/src/RuleParser.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between non\\-falsy\\-string and '' will always evaluate to false\\.$#"
+			count: 1
+			path: packages/validator/src/RuleParser.php
+
+		-
+			message: "#^Offset 0 on array\\<string, mixed\\> on left side of \\?\\? does not exist\\.$#"
+			count: 1
+			path: packages/validator/src/Validator.php
+
+		-
+			message: "#^Using nullsafe property access \"\\?\\-\\>countryCode\" on left side of \\?\\? is unnecessary\\. Use \\-\\> instead\\.$#"
+			count: 1
+			path: packages/waf/src/Middlewares/GeoBlockMiddleware.php
+
+		-
+			message: "#^Expression on left side of \\?\\? is not nullable\\.$#"
+			count: 1
+			path: packages/waf/src/Middlewares/IpFilterMiddleware.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with string will always evaluate to false\\.$#"
+			count: 1
+			path: packages/waf/src/Middlewares/RequestSizeLimiterMiddleware.php
+
+		-
+			message: "#^Constant Lalaz\\\\Waf\\\\Middlewares\\\\TrustedProxyMiddleware\\:\\:AWS_CLOUDFRONT_RANGES_URL is unused\\.$#"
+			count: 1
+			path: packages/waf/src/Middlewares/TrustedProxyMiddleware.php
+
+		-
+			message: "#^Expression on left side of \\?\\? is not nullable\\.$#"
+			count: 1
+			path: packages/waf/src/Middlewares/TrustedProxyMiddleware.php
+
+		-
+			message: "#^Offset 'last_refill' on array\\{tokens\\: float, last_refill\\: float\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 3
+			path: packages/waf/src/RateLimit/RateLimiter.php
+
+		-
+			message: "#^Offset 'tokens' on array\\{tokens\\: float, last_refill\\: float\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 2
+			path: packages/waf/src/RateLimit/RateLimiter.php
+
+		-
+			message: "#^Parameter &\\$bucket by\\-ref type of method Lalaz\\\\Waf\\\\RateLimit\\\\RateLimiter\\:\\:refillTokens\\(\\) expects array\\{tokens\\: float, last_refill\\: float\\}, array\\{tokens\\: float\\|int, last_refill\\: float\\} given\\.$#"
+			count: 2
+			path: packages/waf/src/RateLimit/RateLimiter.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<string, mixed\\> and false will always evaluate to false\\.$#"
+			count: 1
+			path: packages/waf/src/RateLimit/Stores/APCuStore.php
+
+		-
+			message: "#^Variable \\$keys in empty\\(\\) always exists and is not falsy\\.$#"
+			count: 1
+			path: packages/waf/src/RateLimit/Stores/RedisStore.php
+
+		-
+			message: "#^Variable \\$_SERVER on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 2
+			path: packages/web/src/Http/SessionManager.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\Security\\\\Middlewares\\\\CsrfMiddleware\\:\\:getBodyForCsrf\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/Security/Middlewares/CsrfMiddleware.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:compose\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:compose\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:get\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:has\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:mergeData\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:mergeData\\(\\) has parameter \\$newData with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Composers\\\\Composer\\:\\:mergeData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Composers/Composer.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Contracts\\\\TemplateEngineInterface\\:\\:render\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Contracts/TemplateEngineInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Contracts\\\\TemplateEngineInterface\\:\\:renderFromString\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Contracts/TemplateEngineInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Contracts\\\\ViewComposerInterface\\:\\:compose\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Contracts/ViewComposerInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Contracts\\\\ViewComposerInterface\\:\\:compose\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Contracts/ViewComposerInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Contracts\\\\ViewFunctionInterface\\:\\:getOptions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Contracts/ViewFunctionInterface.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Engines\\\\TwigEngine\\:\\:isAbsolutePath\\(\\) is unused\\.$#"
+			count: 1
+			path: packages/web/src/View/Engines/TwigEngine.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Engines\\\\TwigEngine\\:\\:render\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Engines/TwigEngine.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\Engines\\\\TwigEngine\\:\\:renderFromString\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/Engines/TwigEngine.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\TemplateEngine\\:\\:render\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/TemplateEngine.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\View\\:\\:applyComposers\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\View\\:\\:applyComposers\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\View\\:\\:render\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\View\\:\\:renderError\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\View\\:\\:renderNotFound\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\View\\:\\:sendJsonResponse\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Unsafe call to private method Lalaz\\\\Web\\\\View\\\\View\\:\\:applyComposers\\(\\) through static\\:\\:\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Unsafe call to private method Lalaz\\\\Web\\\\View\\\\View\\:\\:matchesPattern\\(\\) through static\\:\\:\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Unsafe call to private method Lalaz\\\\Web\\\\View\\\\View\\:\\:renderDevelopmentError\\(\\) through static\\:\\:\\.$#"
+			count: 1
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Unsafe call to private method Lalaz\\\\Web\\\\View\\\\View\\:\\:sendJsonResponse\\(\\) through static\\:\\:\\.$#"
+			count: 3
+			path: packages/web/src/View/View.php
+
+		-
+			message: "#^Instantiated class Lalaz\\\\Support\\\\LazyObject not found\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewContext.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\ViewContext\\:\\:resolved\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewContext.php
+
+		-
+			message: "#^Property Lalaz\\\\Web\\\\View\\\\ViewContext\\:\\:\\$data type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewContext.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\ViewFunction\\:\\:__construct\\(\\) has parameter \\$callable with no type specified\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewFunction.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\ViewFunction\\:\\:__construct\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewFunction.php
+
+		-
+			message: "#^Method Lalaz\\\\Web\\\\View\\\\ViewFunction\\:\\:getOptions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewFunction.php
+
+		-
+			message: "#^Property Lalaz\\\\Web\\\\View\\\\ViewResponse\\:\\:\\$layout is never read, only written\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewResponse.php
+
+		-
+			message: "#^Property Lalaz\\\\Web\\\\View\\\\ViewResponse\\:\\:\\$useLayout is never read, only written\\.$#"
+			count: 1
+			path: packages/web/src/View/ViewResponse.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClient\\:\\:__construct\\(\\) has parameter \\$defaults with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClient\\:\\:delete\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClient\\:\\:get\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClient\\:\\:patch\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClient\\:\\:post\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClient\\:\\:put\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Offset 'headers' on array\\{status\\: int, headers\\: array\\<string, string\\>, body\\: mixed\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Offset 'status' on array\\{status\\: int, headers\\: array\\<string, string\\>, body\\: mixed\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClient.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClientBuilder\\:\\:baseHeaders\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClientBuilder.php
+
+		-
+			message: "#^Method Lalaz\\\\Wire\\\\HttpClient\\\\HttpClientBuilder\\:\\:withDefaults\\(\\) has parameter \\$defaults with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClientBuilder.php
+
+		-
+			message: "#^Property Lalaz\\\\Wire\\\\HttpClient\\\\HttpClientBuilder\\:\\:\\$defaults type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/wire/src/HttpClient/HttpClientBuilder.php

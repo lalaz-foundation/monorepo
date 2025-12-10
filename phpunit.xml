@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         executionOrder="depends,defects"
+         beStrictAboutOutputDuringTests="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         displayDetailsOnTestsThatTriggerWarnings="true"
+         displayDetailsOnTestsThatTriggerErrors="true">
+    
+    <testsuites>
+        <testsuite name="Auth">
+            <directory>packages/auth/tests</directory>
+        </testsuite>
+        <testsuite name="Cache">
+            <directory>packages/cache/tests</directory>
+        </testsuite>
+        <testsuite name="Database">
+            <directory>packages/database/tests</directory>
+        </testsuite>
+        <testsuite name="Events">
+            <directory>packages/events/tests</directory>
+        </testsuite>
+        <testsuite name="Framework">
+            <directory>packages/framework/tests</directory>
+        </testsuite>
+        <testsuite name="ORM">
+            <directory>packages/orm/tests</directory>
+        </testsuite>
+        <testsuite name="Queue">
+            <directory>packages/queue/tests</directory>
+        </testsuite>
+        <testsuite name="Reactive">
+            <directory>packages/reactive/tests</directory>
+        </testsuite>
+        <testsuite name="Scheduler">
+            <directory>packages/scheduler/tests</directory>
+        </testsuite>
+        <testsuite name="Storage">
+            <directory>packages/storage/tests</directory>
+        </testsuite>
+        <testsuite name="Validator">
+            <directory>packages/validator/tests</directory>
+        </testsuite>
+        <testsuite name="WAF">
+            <directory>packages/waf/tests</directory>
+        </testsuite>
+        <testsuite name="Web">
+            <directory>packages/web/tests</directory>
+        </testsuite>
+        <testsuite name="Wire">
+            <directory>packages/wire/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory>packages/auth/src</directory>
+            <directory>packages/cache/src</directory>
+            <directory>packages/database/src</directory>
+            <directory>packages/events/src</directory>
+            <directory>packages/framework/src</directory>
+            <directory>packages/orm/src</directory>
+            <directory>packages/queue/src</directory>
+            <directory>packages/reactive/src</directory>
+            <directory>packages/scheduler/src</directory>
+            <directory>packages/storage/src</directory>
+            <directory>packages/validator/src</directory>
+            <directory>packages/waf/src</directory>
+            <directory>packages/web/src</directory>
+            <directory>packages/wire/src</directory>
+        </include>
+    </source>
+
+    <coverage>
+        <report>
+            <html outputDirectory="coverage"/>
+            <clover outputFile="coverage.xml"/>
+        </report>
+    </coverage>
+</phpunit>

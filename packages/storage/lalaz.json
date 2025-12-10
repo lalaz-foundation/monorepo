@@ -1,0 +1,9 @@
+{
+    "name": "lalaz/storage",
+    "description": "File storage abstraction with local, S3, and memory drivers.",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Storage\\StorageServiceProvider",
+    "uninstall": {
+        "keep_config": true
+    }
+}
