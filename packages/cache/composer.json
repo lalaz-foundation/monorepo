@@ -1,0 +1,30 @@
+{
+    "name": "lalaz/cache",
+    "description": "PSR-6/PSR-16 caching with pluggable stores (array, file, APCu, Redis).",
+    "version": "1.0.0-rc.1",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lalaz\\Cache\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lalaz\\Cache\\Tests\\": "tests/"
+        }
+    },
+    "suggest": {
+        "ext-redis": "Enable Redis cache store via phpredis.",
+        "predis/predis": "Enable Redis cache store without phpredis.",
+        "ext-apcu": "Enable APCu in-memory cache store."
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

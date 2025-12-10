@@ -1,0 +1,16 @@
+{
+    "name": "lalaz/cache",
+    "description": "PSR-6/PSR-16 caching with pluggable stores (array, file, APCu, Redis).",
+    "version": "1.0.0",
+    "provider": "Lalaz\\Cache\\CacheServiceProvider",
+    "install": {
+        "config": {
+            "stub": "config/cache.php",
+            "destination": "config/cache.php",
+            "overwrite": false
+        }
+    },
+    "uninstall": {
+        "keep_config": true
+    }
+}
