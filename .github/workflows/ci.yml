@@ -24,6 +24,7 @@ jobs:
         id: filter
         with:
           filters: |
+            app: packages/app/**
             auth: packages/auth/**
             cache: packages/cache/**
             database: packages/database/**
@@ -113,37 +114,6 @@ jobs:
           flags: ${{ matrix.package }}
           fail_ci_if_error: false
 
-  test-starters:
-    name: Test Starters
-    needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.starters != '[]' }}
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        starter: ${{ fromJson(needs.detect-changes.outputs.starters) }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          extensions: mbstring
-
-      - name: Install dependencies
-        run: cd starters/${{ matrix.starter }} && composer install --prefer-dist --no-progress
-
-      - name: Validate starter works
-        run: |
-          cd starters/${{ matrix.starter }}
-          php lalaz --version || echo "CLI works"
-
-          # Start server and test health endpoint
-          php lalaz serve &
-          sleep 3
-          curl -f http://localhost:8000/health || exit 1
-          pkill -f "php lalaz serve" || true
-
   code-quality:
     name: Code Quality
     runs-on: ubuntu-latest
@@ -197,7 +167,7 @@ jobs:
 
   summary:
     name: CI Summary
-    needs: [test-packages, test-starters, code-quality, security]
+    needs: [test-packages, code-quality, security]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -205,10 +175,6 @@ jobs:
         run: |
           if [[ "${{ needs.test-packages.result }}" == "failure" ]]; then
             echo "❌ Package tests failed"
-            exit 1
-          fi
-          if [[ "${{ needs.test-starters.result }}" == "failure" ]]; then
-            echo "❌ Starter tests failed"
             exit 1
           fi
           echo "✅ All checks passed"
