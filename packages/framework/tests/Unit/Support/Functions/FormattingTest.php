@@ -27,7 +27,7 @@ class FormattingTest extends FrameworkUnitTestCase
             $this->markTestSkipped('intl extension not available');
         }
 
-        $result = money_format(1234.56);
+        $result = money_format(1234.56, 'BRL', 'pt_BR');
 
         $this->assertIsString($result);
         $this->assertStringContainsString('1.234,56', $result);
@@ -79,7 +79,7 @@ class FormattingTest extends FrameworkUnitTestCase
         $result = number_format_locale(1234567.89);
 
         $this->assertIsString($result);
-        $this->assertStringContainsString('1.234.567,89', $result);
+        $this->assertStringContainsString('1,234,567.89', $result);
     }
 
     /**

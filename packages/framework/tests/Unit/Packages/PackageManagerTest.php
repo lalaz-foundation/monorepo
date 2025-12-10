@@ -292,7 +292,9 @@ class PackageManagerTest extends FrameworkUnitTestCase
     public function testinstallDetectsLocalPackageInMonorepo(): void
     {
         // Setup monorepo structure
-        $projectDir = sys_get_temp_dir() . '/lalaz-monorepo-test-' . uniqid();
+        $rootDir = sys_get_temp_dir() . '/lalaz-monorepo-test-' . uniqid();
+        $projectDir = $rootDir . '/apps/my-app';
+
         mkdir($projectDir, 0755, true);
         mkdir($projectDir . '/config', 0755, true);
         mkdir($projectDir . '/vendor', 0755, true);
@@ -336,8 +338,7 @@ class PackageManagerTest extends FrameworkUnitTestCase
         $this->assertStringContainsString('@dev', $packageRequested);
 
         // Cleanup
-        self::cleanupDirectory($projectDir);
-        self::cleanupDirectory($packagesDir);
+        self::cleanupDirectory($rootDir);
     }
 
     public function testinstallAddsPathRepositoryToComposerJson(): void
@@ -401,14 +402,16 @@ class PackageManagerTest extends FrameworkUnitTestCase
 
         try {
             // Setup project with local package
-            $projectDir = sys_get_temp_dir() . '/lalaz-disabled-test-' . uniqid();
+            $rootDir = sys_get_temp_dir() . '/lalaz-disabled-test-' . uniqid();
+            $projectDir = $rootDir . '/apps/my-app';
+
             mkdir($projectDir, 0755, true);
             mkdir($projectDir . '/config', 0755, true);
             mkdir($projectDir . '/vendor', 0755, true);
 
             // Create local package at ../../packages/cache
             $packagesDir = dirname(dirname($projectDir)) . '/packages';
-            @mkdir($packagesDir . '/cache', 0755, true);
+            mkdir($packagesDir . '/cache', 0755, true);
             file_put_contents($packagesDir . '/cache/composer.json', json_encode([
                 'name' => 'lalaz/cache',
             ]));
@@ -435,8 +438,7 @@ class PackageManagerTest extends FrameworkUnitTestCase
             $this->assertStringNotContainsString('Local package detected', $messagesStr);
 
             // Cleanup
-            self::cleanupDirectory($projectDir);
-            @self::cleanupDirectory($packagesDir);
+            self::cleanupDirectory($rootDir);
         } finally {
             // Restore environment
             putenv('LALAZ_DISABLE_LOCAL_PACKAGES');
@@ -449,14 +451,16 @@ class PackageManagerTest extends FrameworkUnitTestCase
         putenv('APP_ENV=production');
 
         try {
-            $projectDir = sys_get_temp_dir() . '/lalaz-prod-test-' . uniqid();
+            $rootDir = sys_get_temp_dir() . '/lalaz-prod-test-' . uniqid();
+            $projectDir = $rootDir . '/apps/my-app';
+
             mkdir($projectDir, 0755, true);
             mkdir($projectDir . '/config', 0755, true);
             mkdir($projectDir . '/vendor', 0755, true);
 
             // Create local package
             $packagesDir = dirname(dirname($projectDir)) . '/packages';
-            @mkdir($packagesDir . '/events', 0755, true);
+            mkdir($packagesDir . '/events', 0755, true);
             file_put_contents($packagesDir . '/events/composer.json', json_encode([
                 'name' => 'lalaz/events',
             ]));
@@ -480,8 +484,7 @@ class PackageManagerTest extends FrameworkUnitTestCase
             $this->assertEquals('lalaz/events', $packageRequested);
 
             // Cleanup
-            self::cleanupDirectory($projectDir);
-            @self::cleanupDirectory($packagesDir);
+            self::cleanupDirectory($rootDir);
         } finally {
             putenv('APP_ENV');
         }
