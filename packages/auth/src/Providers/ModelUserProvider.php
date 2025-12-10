@@ -91,14 +91,13 @@ class ModelUserProvider implements
         }
 
         // Check if we have any way to query the model
-        $hasOrmManager = class_exists(\Lalaz\Orm\ModelManager::class);
         $hasFindMethod = method_exists($this->model, 'find');
         $hasFindById = method_exists($this->model, 'findById');
         $hasFindOneBy = method_exists($this->model, 'findOneBy');
         $hasFindBy = method_exists($this->model, 'findBy');
         $hasQueryMethod = method_exists($this->model, 'query') || method_exists($this->model, 'where');
 
-        if (!$hasOrmManager && !$hasFindMethod && !$hasFindById && !$hasFindOneBy && !$hasFindBy && !$hasQueryMethod) {
+        if (!$hasFindMethod && !$hasFindById && !$hasFindOneBy && !$hasFindBy && !$hasQueryMethod) {
             throw new \RuntimeException(
                 "Cannot use ModelUserProvider with model '{$this->model}': no query capability available. " .
                 "Either install the lalaz/orm package, or use GenericUserProvider instead.\n\n" .
