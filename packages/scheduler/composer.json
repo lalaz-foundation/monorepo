@@ -12,8 +12,10 @@
     ],
     "require": {
         "php": "^8.3",
-        "lalaz/cache": "*"
+        "lalaz/cache": "@dev"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "path",

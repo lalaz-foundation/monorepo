@@ -7,7 +7,7 @@ namespace Lalaz\Installer;
 class Installer
 {
     private const VERSION = '1.0.0-rc1';
-    
+
     private static array $colors = [
         'reset' => "\033[0m",
         'green' => "\033[32m",
@@ -28,19 +28,19 @@ class Installer
     public function execute(): void
     {
         $this->showBanner();
-        
+
         $projectType = $this->askProjectType();
         $features = $this->askFeatures($projectType);
-        
+
         $this->setupProject($projectType, $features);
-        
+
         $this->showSuccess();
     }
 
     private function showBanner(): void
     {
         $c = self::$colors;
-        
+
         echo "\n";
         echo "{$c['green']}{$c['bold']}";
         echo "  _          _           \n";
@@ -56,15 +56,15 @@ class Installer
     private function askProjectType(): string
     {
         $c = self::$colors;
-        
+
         echo "{$c['cyan']}{$c['bold']}? What type of project do you want to create?{$c['reset']}\n\n";
         echo "  {$c['green']}[1]{$c['reset']} Web Application {$c['dim']}(MVC with Twig templates){$c['reset']}\n";
         echo "  {$c['green']}[2]{$c['reset']} REST API {$c['dim']}(JSON responses, no views){$c['reset']}\n";
         echo "  {$c['green']}[3]{$c['reset']} Minimal {$c['dim']}(just the framework core){$c['reset']}\n";
         echo "\n";
-        
-        $choice = $this->prompt("Your choice", "1");
-        
+
+        $choice = $this->prompt('Your choice', '1');
+
         return match ($choice) {
             '2' => 'api',
             '3' => 'minimal',
@@ -76,69 +76,69 @@ class Installer
     {
         $c = self::$colors;
         $features = [];
-        
+
         echo "\n{$c['cyan']}{$c['bold']}? Select features to include:{$c['reset']}\n\n";
-        
+
         // Database
-        $features['database'] = $this->confirm("Include database support?", true);
-        
+        $features['database'] = $this->confirm('Include database support?', true);
+
         if ($features['database']) {
             echo "\n  {$c['dim']}Database driver:{$c['reset']}\n";
             echo "  {$c['green']}[1]{$c['reset']} MySQL\n";
             echo "  {$c['green']}[2]{$c['reset']} PostgreSQL\n";
             echo "  {$c['green']}[3]{$c['reset']} SQLite\n";
-            $dbChoice = $this->prompt("  Choose", "1");
+            $dbChoice = $this->prompt('  Choose', '1');
             $features['db_driver'] = match ($dbChoice) {
                 '2' => 'pgsql',
                 '3' => 'sqlite',
                 default => 'mysql',
             };
         }
-        
+
         // Auth (only for web/api)
         if ($projectType !== 'minimal') {
-            $features['auth'] = $this->confirm("Include authentication?", $projectType === 'web');
+            $features['auth'] = $this->confirm('Include authentication?', $projectType === 'web');
         }
-        
+
         // Cache
-        $features['cache'] = $this->confirm("Include caching?", false);
-        
+        $features['cache'] = $this->confirm('Include caching?', false);
+
         // Queue
-        $features['queue'] = $this->confirm("Include background jobs/queue?", false);
-        
+        $features['queue'] = $this->confirm('Include background jobs/queue?', false);
+
         // Docker
-        $features['docker'] = $this->confirm("Include Docker setup?", false);
-        
+        $features['docker'] = $this->confirm('Include Docker setup?', false);
+
         return $features;
     }
 
     private function setupProject(string $projectType, array $features): void
     {
         $c = self::$colors;
-        
+
         echo "\n{$c['cyan']}Creating your {$projectType} project...{$c['reset']}\n\n";
-        
+
         // Copy template files
         $this->copyTemplate($projectType);
-        
+
         // Generate composer.json
         $this->generateComposerJson($projectType, $features);
-        
+
         // Generate .env
         $this->generateEnvFile($features);
-        
+
         // Generate config files
         $this->generateConfigFiles($features);
-        
+
         // Docker setup
         if ($features['docker'] ?? false) {
             $this->generateDockerFiles($features);
         }
-        
+
         // Install dependencies
         echo "{$c['yellow']}Installing dependencies...{$c['reset']}\n";
         passthru('composer install --quiet');
-        
+
         // Cleanup installer files
         $this->cleanup();
     }
@@ -146,11 +146,11 @@ class Installer
     private function copyTemplate(string $type): void
     {
         $templateDir = __DIR__ . "/../templates/{$type}";
-        
+
         if (!is_dir($templateDir)) {
             $templateDir = __DIR__ . '/../templates/minimal';
         }
-        
+
         $this->recurseCopy($templateDir, getcwd());
     }
 
@@ -158,29 +158,29 @@ class Installer
     {
         $dir = opendir($src);
         @mkdir($dst, 0755, true);
-        
+
         while (($file = readdir($dir)) !== false) {
             if ($file === '.' || $file === '..') {
                 continue;
             }
-            
+
             $srcPath = $src . '/' . $file;
             $dstPath = $dst . '/' . $file;
-            
+
             if (is_dir($srcPath)) {
                 $this->recurseCopy($srcPath, $dstPath);
             } else {
                 copy($srcPath, $dstPath);
             }
         }
-        
+
         closedir($dir);
     }
 
     private function generateComposerJson(string $projectType, array $features): void
     {
         $projectName = basename(getcwd());
-        
+
         $composer = [
             'name' => "app/{$projectName}",
             'description' => 'A Lalaz application',
@@ -198,30 +198,30 @@ class Installer
             'minimum-stability' => 'stable',
             'prefer-stable' => true,
         ];
-        
+
         // Add packages based on features
         if ($projectType === 'web') {
             $composer['require']['lalaz/web'] = '^1.0';
             $composer['require']['twig/twig'] = '^3.0';
         }
-        
+
         if ($features['database'] ?? false) {
             $composer['require']['lalaz/database'] = '^1.0';
             $composer['require']['lalaz/orm'] = '^1.0';
         }
-        
+
         if ($features['auth'] ?? false) {
             $composer['require']['lalaz/auth'] = '^1.0';
         }
-        
+
         if ($features['cache'] ?? false) {
             $composer['require']['lalaz/cache'] = '^1.0';
         }
-        
+
         if ($features['queue'] ?? false) {
             $composer['require']['lalaz/queue'] = '^1.0';
         }
-        
+
         file_put_contents(
             getcwd() . '/composer.json',
             json_encode($composer, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n"
@@ -234,32 +234,32 @@ class Installer
         $env .= "APP_ENV=local\n";
         $env .= "APP_DEBUG=true\n";
         $env .= "APP_URL=http://localhost:8000\n\n";
-        
+
         if ($features['database'] ?? false) {
             $driver = $features['db_driver'] ?? 'mysql';
-            
+
             $env .= "DB_CONNECTION={$driver}\n";
-            
+
             if ($driver === 'sqlite') {
                 $env .= "DB_DATABASE=database/database.sqlite\n";
             } else {
                 $env .= "DB_HOST=127.0.0.1\n";
-                $env .= "DB_PORT=" . ($driver === 'pgsql' ? '5432' : '3306') . "\n";
+                $env .= 'DB_PORT=' . ($driver === 'pgsql' ? '5432' : '3306') . "\n";
                 $env .= "DB_DATABASE=lalaz\n";
                 $env .= "DB_USERNAME=root\n";
                 $env .= "DB_PASSWORD=\n";
             }
             $env .= "\n";
         }
-        
+
         if ($features['cache'] ?? false) {
             $env .= "CACHE_DRIVER=file\n\n";
         }
-        
+
         if ($features['queue'] ?? false) {
             $env .= "QUEUE_CONNECTION=database\n\n";
         }
-        
+
         file_put_contents(getcwd() . '/.env', $env);
         file_put_contents(getcwd() . '/.env.example', $env);
     }
@@ -267,7 +267,7 @@ class Installer
     private function generateConfigFiles(array $features): void
     {
         @mkdir(getcwd() . '/config', 0755, true);
-        
+
         // app.php
         $appConfig = <<<'PHP'
 <?php
@@ -284,7 +284,7 @@ return [
     ],
 ];
 PHP;
-        
+
         file_put_contents(getcwd() . '/config/app.php', $appConfig);
     }
 
@@ -327,7 +327,7 @@ YAML;
 
         if ($features['database'] ?? false) {
             $driver = $features['db_driver'] ?? 'mysql';
-            
+
             if ($driver === 'mysql') {
                 $dockerCompose .= <<<'YAML'
 
@@ -380,14 +380,14 @@ YAML;
         if (!is_dir($dir)) {
             return;
         }
-        
+
         $files = array_diff(scandir($dir), ['.', '..']);
-        
+
         foreach ($files as $file) {
             $path = $dir . '/' . $file;
             is_dir($path) ? $this->removeDir($path) : unlink($path);
         }
-        
+
         rmdir($dir);
     }
 
@@ -395,7 +395,7 @@ YAML;
     {
         $c = self::$colors;
         $projectName = basename(getcwd());
-        
+
         echo "\n";
         echo "{$c['green']}{$c['bold']}✅ Success!{$c['reset']} Your Lalaz project is ready.\n\n";
         echo "{$c['cyan']}Next steps:{$c['reset']}\n\n";
@@ -410,13 +410,13 @@ YAML;
     {
         $c = self::$colors;
         $defaultHint = $default ? " {$c['dim']}[{$default}]{$c['reset']}" : '';
-        
+
         echo "{$c['green']}›{$c['reset']} {$question}{$defaultHint}: ";
-        
+
         $handle = fopen('php://stdin', 'r');
         $input = trim(fgets($handle));
         fclose($handle);
-        
+
         return $input !== '' ? $input : $default;
     }
 
@@ -424,17 +424,17 @@ YAML;
     {
         $c = self::$colors;
         $hint = $default ? 'Y/n' : 'y/N';
-        
+
         echo "{$c['green']}›{$c['reset']} {$question} {$c['dim']}({$hint}){$c['reset']}: ";
-        
+
         $handle = fopen('php://stdin', 'r');
         $input = strtolower(trim(fgets($handle)));
         fclose($handle);
-        
+
         if ($input === '') {
             return $default;
         }
-        
+
         return in_array($input, ['y', 'yes', 's', 'sim'], true);
     }
 }
