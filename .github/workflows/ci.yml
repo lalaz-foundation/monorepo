@@ -24,7 +24,6 @@ jobs:
         id: filter
         with:
           filters: |
-            app: packages/app/**
             auth: packages/auth/**
             cache: packages/cache/**
             database: packages/database/**

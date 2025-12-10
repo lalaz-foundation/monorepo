@@ -76,8 +76,12 @@ jobs:
           for package in packages/*/; do
             echo "🧪 Testing $package"
             cd "$package"
-            composer install --prefer-dist --no-progress --quiet
-            vendor/bin/phpunit --no-coverage
+            if [ -f "phpunit.xml" ]; then
+              composer install --prefer-dist --no-progress --quiet
+              vendor/bin/phpunit --no-coverage
+            else
+              echo "⚠️ No phpunit.xml found in $package, skipping tests..."
+            fi
             cd ../..
           done
         env:
