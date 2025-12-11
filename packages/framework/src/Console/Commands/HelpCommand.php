@@ -15,7 +15,7 @@ use Lalaz\Console\Output;
  * for the Lalaz CLI framework.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class HelpCommand implements CommandInterface

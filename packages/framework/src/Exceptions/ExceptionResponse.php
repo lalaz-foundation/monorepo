@@ -10,7 +10,7 @@ use Lalaz\Web\Http\Response;
  * Value-object representing how to respond to an exception.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 final class ExceptionResponse
 {

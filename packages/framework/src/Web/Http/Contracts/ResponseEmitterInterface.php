@@ -10,7 +10,7 @@ use Lalaz\Web\Http\Response;
  * Contract for HTTP response emitters capable of flushing body chunks.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ResponseEmitterInterface extends ResponseBodyEmitterInterface
 {

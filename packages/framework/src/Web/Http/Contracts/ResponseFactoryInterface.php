@@ -8,7 +8,7 @@ namespace Lalaz\Web\Http\Contracts;
  * Creates HTTP responses tailored to the current runtime.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ResponseFactoryInterface
 {

@@ -17,7 +17,7 @@ use Lalaz\Web\Routing\RouteUrlGenerator;
  * method, following the Open/Closed Principle.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface RouterInterface
 {

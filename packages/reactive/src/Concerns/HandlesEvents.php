@@ -10,7 +10,7 @@ namespace Lalaz\Reactive\Concerns;
  * Provides event handling capabilities to ReactiveComponent
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 trait HandlesEvents

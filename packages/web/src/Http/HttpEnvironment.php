@@ -11,7 +11,7 @@ namespace Lalaz\Web\Http;
  * HTTPS, AJAX/JSON requests, and other environment info.
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class HttpEnvironment

@@ -10,7 +10,7 @@ use Lalaz\Web\Routing\Contracts\RouterInterface;
 /**
  * Discovers controller classes on disk and registers their #[Route] attributes.
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ControllerDiscoveryRegistrar implements RouteRegistrarInterface

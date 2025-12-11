@@ -15,7 +15,7 @@ use Lalaz\Web\Http\Request;
  * ReactiveController - Handles AJAX requests from reactive components
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ReactiveController

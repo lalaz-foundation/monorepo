@@ -13,7 +13,7 @@ use Lalaz\Web\Http\SessionManager;
  * cleared after being displayed once.
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 trait FlashMessage

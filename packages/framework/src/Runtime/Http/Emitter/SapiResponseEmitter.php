@@ -22,7 +22,7 @@ use Lalaz\Web\Http\Response;
  * - Auto-adds Content-Type if not present
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class SapiResponseEmitter implements ResponseEmitterInterface

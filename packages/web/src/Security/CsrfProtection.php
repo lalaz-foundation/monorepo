@@ -13,7 +13,7 @@ use Lalaz\Web\Http\CookiePolicy;
  * and validation against request payload or headers.
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class CsrfProtection

@@ -18,7 +18,7 @@ use Lalaz\Console\Output;
  * Usage: php lalaz config:inspect app.name
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class ConfigInspectCommand implements CommandInterface

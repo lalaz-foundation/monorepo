@@ -13,7 +13,7 @@ use Throwable;
  * Contract for HTTP exception handlers capable of rendering responses.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ExceptionHandlerInterface
 {

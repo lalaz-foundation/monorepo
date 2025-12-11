@@ -13,7 +13,7 @@ use Lalaz\Web\Routing\Router;
  * ReactiveServiceProvider - Registers reactive components system
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ReactiveServiceProvider extends ServiceProvider

@@ -16,7 +16,7 @@ use Lalaz\Web\Http\Request;
  * for handling incoming HTTP requests in web server environments.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class SapiRequestFactory implements RequestFactoryInterface

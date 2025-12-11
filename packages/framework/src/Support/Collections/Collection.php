@@ -23,7 +23,7 @@ use Traversable;
  * @implements IteratorAggregate<TKey, TValue>
  *
  * @package lalaz/framework
- * @author Lalaz Framework <hello@lalaz.dev>
+ * @author Lalaz Framework <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class Collection implements

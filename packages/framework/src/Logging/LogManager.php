@@ -18,7 +18,7 @@ use Psr\Log\LoggerInterface;
  * drivers including single file, daily rotating, stack, and console.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class LogManager implements LoggerInterface

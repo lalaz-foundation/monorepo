@@ -9,7 +9,7 @@ declare(strict_types=1);
  * and accessing nested array/object values.
  *
  * @package lalaz/framework
- * @author Lalaz Framework <hello@lalaz.dev>
+ * @author Lalaz Framework <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 

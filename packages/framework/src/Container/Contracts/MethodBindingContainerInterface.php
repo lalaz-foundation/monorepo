@@ -13,7 +13,7 @@ use Lalaz\Container\MethodBindingBuilder;
  * allowing consumers to depend only on method binding functionality.
  *
  *  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 interface MethodBindingContainerInterface

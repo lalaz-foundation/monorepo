@@ -16,7 +16,7 @@ namespace Lalaz\Support\Cache;
  * cache corruption in high-concurrency environments.
  *
  * @package lalaz/framework
- * @author Lalaz Team <hello@lalaz.dev>
+ * @author Lalaz Team <hi@lalaz.dev>
  */
 final class PhpArrayCache
 {

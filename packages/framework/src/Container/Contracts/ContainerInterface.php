@@ -22,7 +22,7 @@ use Psr\Container\ContainerInterface as PsrContainerInterface;
  * - MethodBindingContainerInterface: `when`, `getMethodBindings`, `hasMethodBindings`
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ContainerInterface extends
     PsrContainerInterface,

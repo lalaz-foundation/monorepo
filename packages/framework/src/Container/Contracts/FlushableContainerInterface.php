@@ -10,7 +10,7 @@ namespace Lalaz\Container\Contracts;
  * Provides method for clearing all bindings and instances.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface FlushableContainerInterface
 {

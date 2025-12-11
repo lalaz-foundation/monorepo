@@ -8,7 +8,7 @@ namespace Lalaz\Reactive\Exceptions;
  * Exception thrown when trying to access a non-public property
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class PropertyNotAccessibleException extends ReactiveException

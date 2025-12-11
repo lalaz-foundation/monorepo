@@ -16,7 +16,7 @@ use Lalaz\Logging\Contracts\FormatterInterface;
  * human readability is preferred over machine parsing.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class TextFormatter implements FormatterInterface

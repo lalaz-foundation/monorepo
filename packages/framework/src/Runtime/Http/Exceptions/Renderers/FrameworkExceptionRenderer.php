@@ -19,7 +19,7 @@ use Throwable;
  * a generic error message; in debug mode, exposes the actual message.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class FrameworkExceptionRenderer implements ExceptionRendererInterface

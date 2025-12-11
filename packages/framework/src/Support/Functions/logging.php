@@ -9,7 +9,7 @@ declare(strict_types=1);
  * These are convenience wrappers around the Log facade.
  *
  * @package lalaz/framework
- * @author Lalaz Framework <hello@lalaz.dev>
+ * @author Lalaz Framework <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 

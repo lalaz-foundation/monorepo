@@ -8,7 +8,7 @@ namespace Lalaz\Web\Http\Contracts;
  * Builds framework requests from the underlying runtime environment.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface RequestFactoryInterface
 {

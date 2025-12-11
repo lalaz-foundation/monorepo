@@ -8,7 +8,7 @@ namespace Lalaz\Web\Http;
  * Cookie management with secure defaults.
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class CookiePolicy

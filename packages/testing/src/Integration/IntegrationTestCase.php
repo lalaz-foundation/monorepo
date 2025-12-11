@@ -52,7 +52,7 @@ use Lalaz\Testing\Unit\UnitTestCase;
  * ```
  *
  * @package lalaz/testing
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 abstract class IntegrationTestCase extends UnitTestCase

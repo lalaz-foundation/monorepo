@@ -11,7 +11,7 @@ namespace Lalaz\Container\Contracts;
  * that are instantiated once per scope lifecycle.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ScopedContainerInterface
 {

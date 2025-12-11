@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Provides global helper functions for dispatching events.
  *
  * @package lalaz/events
- * @author Lalaz Framework <hello@lalaz.dev>
+ * @author Lalaz Framework <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 

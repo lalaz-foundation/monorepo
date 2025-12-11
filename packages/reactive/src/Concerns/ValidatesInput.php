@@ -12,7 +12,7 @@ use Lalaz\Validation\Validator;
  * Provides validation capabilities to ReactiveComponent
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 trait ValidatesInput

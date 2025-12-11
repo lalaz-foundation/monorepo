@@ -14,7 +14,7 @@ use Throwable;
  * to provide contextual information for debugging.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 class NotFoundException extends ContainerException implements NotFoundExceptionInterface
 {

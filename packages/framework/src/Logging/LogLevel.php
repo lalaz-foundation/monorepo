@@ -12,7 +12,7 @@ use Psr\Log\LogLevel as PsrLogLevel;
  * Extends PSR-3 LogLevel with priority comparison for filtering.
  *
  *  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class LogLevel extends PsrLogLevel

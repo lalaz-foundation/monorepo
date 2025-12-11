@@ -12,7 +12,7 @@ use Throwable;
  * Strategy interface that renders a throwable into an HTTP-friendly response.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ExceptionRendererInterface
 {

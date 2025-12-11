@@ -8,7 +8,7 @@ namespace Lalaz\Web\Http\Contracts;
  * Abstraction for emitting HTTP response body chunks.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ResponseBodyEmitterInterface
 {

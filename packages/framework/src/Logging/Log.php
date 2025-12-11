@@ -15,7 +15,7 @@ use Stringable;
  * coupling to a specific Application class.
  *
  *  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  *
  * @method static void emergency(string|Stringable $message, array $context = [])

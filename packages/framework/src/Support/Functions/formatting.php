@@ -9,7 +9,7 @@ declare(strict_types=1);
  * dates, and strings with internationalization support.
  *
  * @package lalaz/framework
- * @author Lalaz Framework <hello@lalaz.dev>
+ * @author Lalaz Framework <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 

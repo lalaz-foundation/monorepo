@@ -10,7 +10,7 @@ use RuntimeException;
  * Thrown when validation fails.
  *
  * @package lalaz/validation
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 final class ValidationException extends RuntimeException
 {

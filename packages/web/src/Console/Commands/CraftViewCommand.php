@@ -20,7 +20,7 @@ use Lalaz\Console\Output;
  *        php lalaz craft:view components/alert --blank
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class CraftViewCommand implements CommandInterface

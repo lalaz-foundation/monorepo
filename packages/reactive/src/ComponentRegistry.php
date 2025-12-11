@@ -8,7 +8,7 @@ namespace Lalaz\Reactive;
  * ComponentRegistry - Stores component instances during request
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ComponentRegistry

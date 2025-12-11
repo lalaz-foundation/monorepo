@@ -11,7 +11,7 @@ use Throwable;
  * Exception thrown when package manifest validation fails.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 final class ManifestValidationException extends FrameworkException
 {

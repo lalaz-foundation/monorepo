@@ -22,7 +22,7 @@ use Lalaz\Web\Http\Contracts\ResponseInterface;
  * request-scoped services.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ScopedContainerMiddleware implements MiddlewareInterface

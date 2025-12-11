@@ -13,7 +13,7 @@ use Lalaz\Logging\Contracts\FormatterInterface;
  * like ELK Stack, Datadog, CloudWatch, etc.
  *
  *  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class JsonFormatter implements FormatterInterface

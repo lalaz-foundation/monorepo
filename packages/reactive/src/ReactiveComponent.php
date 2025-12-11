@@ -27,7 +27,7 @@ use Lalaz\Reactive\Concerns\ValidatesInput;
  * }
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ReactiveComponent

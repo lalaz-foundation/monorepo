@@ -8,7 +8,7 @@ namespace Lalaz\Console\Generators;
  * Code generation utilities for craft commands.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class Generator

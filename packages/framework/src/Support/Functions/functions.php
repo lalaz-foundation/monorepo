@@ -9,7 +9,7 @@ declare(strict_types=1);
  * globally available throughout the application.
  *
  * @package lalaz/framework
- * @author Lalaz Framework <hello@lalaz.dev>
+ * @author Lalaz Framework <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 

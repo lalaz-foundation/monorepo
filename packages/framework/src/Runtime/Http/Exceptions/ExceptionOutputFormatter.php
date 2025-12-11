@@ -17,7 +17,7 @@ namespace Lalaz\Runtime\Http\Exceptions;
  * In production, only whitelisted "safe" keys are included.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ExceptionOutputFormatter

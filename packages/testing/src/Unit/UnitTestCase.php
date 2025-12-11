@@ -33,7 +33,7 @@ use ReflectionClass;
  * ```
  *
  * @package lalaz/testing
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 abstract class UnitTestCase extends PHPUnitTestCase

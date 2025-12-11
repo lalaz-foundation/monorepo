@@ -29,7 +29,7 @@ use Lalaz\Exceptions\FrameworkException;
  * ```
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class CircuitOpenException extends FrameworkException

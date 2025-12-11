@@ -8,7 +8,7 @@ namespace Lalaz\Reactive\Exceptions;
  * Exception thrown when trying to call a non-public method
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class MethodNotAccessibleException extends ReactiveException

@@ -9,7 +9,7 @@ declare(strict_types=1);
  * including URL generation for named routes and route existence checks.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 

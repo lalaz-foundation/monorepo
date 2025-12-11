@@ -21,7 +21,7 @@ use Lalaz\Console\Output;
  *        php lalaz craft:composer Admin/SidebarComposer
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class CraftComposerCommand implements CommandInterface

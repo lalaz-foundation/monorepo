@@ -11,7 +11,7 @@ use Throwable;
  * Reporter hook executed whenever the HTTP exception handler catches an error.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ExceptionReporterInterface
 {

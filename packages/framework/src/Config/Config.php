@@ -17,7 +17,7 @@ use Lalaz\Config\Contracts\ConfigRepositoryInterface;
  * For new code, prefer injecting ConfigRepositoryInterface directly.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class Config

@@ -29,7 +29,7 @@ use Lalaz\Web\Http\Contracts\ResponseInterface;
  * ```
  *
  * @package Lalaz\Web\View
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class ViewResponse implements RenderableInterface

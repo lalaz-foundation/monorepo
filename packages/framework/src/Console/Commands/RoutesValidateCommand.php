@@ -19,7 +19,7 @@ use Lalaz\Web\Routing\RouteDefinition;
  * Usage: php lalaz routes:validate
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class RoutesValidateCommand implements CommandInterface

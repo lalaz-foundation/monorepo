@@ -14,7 +14,7 @@ use Lalaz\Exceptions\ConfigurationException;
  *
  * @template T
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 final class LruCache
 {

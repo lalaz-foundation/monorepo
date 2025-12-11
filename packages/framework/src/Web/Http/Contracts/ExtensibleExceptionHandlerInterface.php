@@ -8,7 +8,7 @@ namespace Lalaz\Web\Http\Contracts;
  * Exception handler extension points for registering renderers/reporters.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ExtensibleExceptionHandlerInterface extends ExceptionHandlerInterface
 {

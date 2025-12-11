@@ -13,7 +13,7 @@ use Lalaz\Testing\Integration\TestApplication;
  * TestApplication container in integration tests.
  *
  * @package lalaz/testing
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 trait InteractsWithContainer

@@ -8,7 +8,7 @@ namespace Lalaz\Reactive\Exceptions;
  * Exception thrown when a component class is not found
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ComponentNotFoundException extends ReactiveException

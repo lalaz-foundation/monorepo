@@ -11,7 +11,7 @@ use Lalaz\Reactive\Exceptions\ComponentNotFoundException;
  * ReactiveManager - Manages component lifecycle and rendering
  *
  * @package lalaz/reactive
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class ReactiveManager

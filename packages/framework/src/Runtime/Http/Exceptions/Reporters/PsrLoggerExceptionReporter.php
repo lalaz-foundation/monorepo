@@ -17,7 +17,7 @@ use Throwable;
  * the framework's Logger, or third-party services.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class PsrLoggerExceptionReporter implements ExceptionReporterInterface

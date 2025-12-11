@@ -11,7 +11,7 @@ namespace Lalaz\Testing\E2E;
  * HTTP responses in end-to-end tests.
  *
  * @package lalaz/testing
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class TestResponse

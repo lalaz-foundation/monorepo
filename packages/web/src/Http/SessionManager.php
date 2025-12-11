@@ -20,7 +20,7 @@ use Lalaz\Web\Security\Fingerprint;
  * with dependency injection patterns.
  *
  * @package lalaz/web
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 final class SessionManager

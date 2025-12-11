@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
  * Registers Logger and LogManager in the container based on configuration.
  *
  *  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  * @link https://lalaz.dev
  */
 class LogServiceProvider extends ServiceProvider

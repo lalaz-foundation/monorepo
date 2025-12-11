@@ -11,7 +11,7 @@ namespace Lalaz\Container\Contracts;
  * callables with dependency injection.
  *
  * @package lalaz/framework
- * @author Gregory Serrao <hello@lalaz.dev>
+ * @author Gregory Serrao <hi@lalaz.dev>
  */
 interface ResolvingContainerInterface
 {
