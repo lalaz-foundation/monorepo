@@ -20,6 +20,10 @@
         {
             "type": "path",
             "url": "../cache"
+        },
+        {
+            "type": "path",
+            "url": "../framework"
         }
     ],
     "autoload": {

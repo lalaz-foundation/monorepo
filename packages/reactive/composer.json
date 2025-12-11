@@ -22,6 +22,10 @@
         {
             "type": "path",
             "url": "../framework"
+        },
+        {
+            "type": "path",
+            "url": "../web"
         }
     ],
     "require": {
