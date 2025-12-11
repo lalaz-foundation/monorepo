@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 env:
   PHP_VERSION: '8.3'
@@ -147,3 +148,9 @@ jobs:
 
           prerelease: ${{ needs.validate.outputs.is_prerelease == 'true' }}
           generate_release_notes: true
+
+      - name: Trigger Publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run publish.yml -f version=${{ needs.validate.outputs.version }}
