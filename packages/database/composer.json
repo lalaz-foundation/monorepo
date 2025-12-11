@@ -3,6 +3,12 @@
     "description": "Database abstraction layer with connection pooling and fluent query builder.",
     "version": "1.0.0-rc.1",
     "type": "library",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework"
+        }
+    ],
     "require": {
         "php": "^8.3",
         "psr/log": "^3.0",
