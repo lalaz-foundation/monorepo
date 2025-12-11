@@ -14,6 +14,7 @@
     ],
     "require": {
         "php": "^8.3",
+        "lalaz/framework": "@dev",
         "lalaz/database": "@dev"
     },
     "autoload": {

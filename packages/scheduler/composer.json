@@ -12,9 +12,9 @@
     ],
     "require": {
         "php": "^8.3",
+        "lalaz/framework": "@dev",
         "lalaz/cache": "@dev"
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
         {

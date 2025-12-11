@@ -35,12 +35,12 @@
         }
     ],
     "require": {
-        "php": "^8.3"
+        "php": "^8.3",
+        "lalaz/framework": "@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^11.0 || ^12.0",
         "lalaz/queue": "@dev",
-        "lalaz/framework": "@dev",
         "lalaz/testing": "@dev"
     },
     "suggest": {

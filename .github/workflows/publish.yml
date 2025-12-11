@@ -101,7 +101,7 @@ jobs:
 
           # Update dependencies, remove repositories and version (let tags handle version)
           if [ -f composer.json ]; then
-            jq 'del(.repositories) | del(.version) | if .require then .require |= with_entries(if .key | startswith("lalaz/") then .value = "^${{ steps.version.outputs.version }}" else . end) else . end' \
+            jq 'del(.repositories) | del(.version) | (if .require then .require |= with_entries(if .key | startswith("lalaz/") then .value = "^${{ steps.version.outputs.version }}" else . end) else . end) | (if ."require-dev" then ."require-dev" |= with_entries(if .key | startswith("lalaz/") then .value = "^${{ steps.version.outputs.version }}" else . end) else . end)' \
               composer.json > composer.tmp.json
             mv composer.tmp.json composer.json
           fi
