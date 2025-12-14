@@ -6,5 +6,4 @@ use Lalaz\Runtime\Http\HttpApplication;
 
 $app = HttpApplication::boot(__DIR__.'/..');
 
-$response = $app->handleRequest();
-$app->sendResponse($response);
+$app->run();
