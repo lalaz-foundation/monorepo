@@ -1,0 +1,90 @@
+{% extends "layouts/app.twig" %}
+
+{% block content %}
+<!-- Hero -->
+<section class="text-center" style="padding: 5rem 0 3rem;">
+    <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+        About <span class="text-gradient">Lalaz</span>
+    </h1>
+    <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+        A modern PHP framework born from the frustration with complexity
+    </p>
+</section>
+
+<!-- Philosophy -->
+<section style="padding: 2rem 0 4rem;">
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">
+            💡 Our Philosophy
+        </h2>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            Lalaz was created by developers who were tired of overengineered solutions. We believe that building
+            web applications should be <strong style="color: var(--text-primary);">simple, fast, and enjoyable</strong>.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+            No transpilation hell. No configuration nightmares. No framework lock-in. Just clean PHP code
+            that runs anywhere — from shared hosting to Kubernetes.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+            We took inspiration from Laravel's elegance, Slim's simplicity, and added our own touch of
+            modern PHP 8.3+ features to create something truly developer-friendly.
+        </p>
+    </div>
+</section>
+
+<!-- Values -->
+<section style="padding: 2rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">
+        Core <span class="text-gradient">Values</span>
+    </h2>
+
+    <div class="grid grid-2" style="max-width: 900px; margin: 0 auto;">
+        <div class="card">
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">🎯 Simplicity First</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Convention over configuration. Sensible defaults that work out of the box.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">⚡ Performance Matters</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Zero unnecessary overhead. Every line of code earns its place.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">🔓 No Lock-in</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Use what you need. Replace what you don't. It's your application.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">📖 Clear Documentation</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Comprehensive guides and examples that get you productive fast.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section style="padding: 4rem 0;" class="text-center">
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">
+        Built with 💚 by the <span class="text-gradient">Lalaz Foundation</span>
+    </h2>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+        Open source. Community driven. Forever free.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/lalaz-foundation/lalaz" class="btn btn-secondary">
+            ★ Star on GitHub
+        </a>
+        <a href="https://docs.lalaz.dev" class="btn btn-primary">
+            Read the Docs →
+        </a>
+    </div>
+</section>
+{% endblock %}

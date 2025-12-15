@@ -18,6 +18,7 @@ require_once __DIR__ . '/configuration.php';
 require_once __DIR__ . '/container.php';
 require_once __DIR__ . '/formatting.php';
 require_once __DIR__ . '/logging.php';
+require_once __DIR__ . '/paths.php';
 require_once __DIR__ . '/responses.php';
 require_once __DIR__ . '/retry.php';
 require_once __DIR__ . '/routing.php';

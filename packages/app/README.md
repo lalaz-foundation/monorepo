@@ -9,7 +9,7 @@ composer create-project lalaz/app my-project
 ```
 
 The wizard will ask you:
-- Project type (Web, API, or Minimal)
+- Project type (Web or API)
 - Features to include (Database, Auth, Cache, Queue, Docker)
 - Configuration preferences
 

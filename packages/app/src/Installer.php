@@ -60,14 +60,12 @@ class Installer
         echo "{$c['cyan']}{$c['bold']}? What type of project do you want to create?{$c['reset']}\n\n";
         echo "  {$c['green']}[1]{$c['reset']} Web Application {$c['dim']}(MVC with Twig templates){$c['reset']}\n";
         echo "  {$c['green']}[2]{$c['reset']} REST API {$c['dim']}(JSON responses, no views){$c['reset']}\n";
-        echo "  {$c['green']}[3]{$c['reset']} Minimal {$c['dim']}(just the framework core){$c['reset']}\n";
         echo "\n";
 
         $choice = $this->prompt('Your choice', '1');
 
         return match ($choice) {
             '2' => 'api',
-            '3' => 'minimal',
             default => 'web',
         };
     }
@@ -96,9 +94,7 @@ class Installer
         }
 
         // Auth (only for web/api)
-        if ($projectType !== 'minimal') {
-            $features['auth'] = $this->confirm('Include authentication?', $projectType === 'web');
-        }
+        $features['auth'] = $this->confirm('Include authentication?', $projectType === 'web');
 
         // Cache
         $features['cache'] = $this->confirm('Include caching?', false);
@@ -128,7 +124,7 @@ class Installer
         $this->generateEnvFile($features);
 
         // Generate config files
-        $this->generateConfigFiles($features);
+        $this->generateConfigFiles($projectType, $features);
 
         // Docker setup
         if ($features['docker'] ?? false) {
@@ -148,7 +144,7 @@ class Installer
         $templateDir = __DIR__ . "/../templates/{$type}";
 
         if (!is_dir($templateDir)) {
-            $templateDir = __DIR__ . '/../templates/minimal';
+            $templateDir = __DIR__ . '/../templates/api';
         }
 
         $this->recurseCopy($templateDir, getcwd());
@@ -264,12 +260,162 @@ class Installer
         file_put_contents(getcwd() . '/.env.example', $env);
     }
 
-    private function generateConfigFiles(array $features): void
+    private function generateConfigFiles(string $projectType, array $features): void
     {
         @mkdir(getcwd() . '/config', 0755, true);
 
+        $providers = [
+            'Lalaz\Config\ConfigServiceProvider::class',
+            'Lalaz\Logging\LogServiceProvider::class',
+        ];
+
+        if ($projectType === 'web') {
+            $providers[] = 'Lalaz\Web\WebServiceProvider::class';
+
+            // views.php
+            $viewsConfig = <<<'PHP'
+<?php
+
+return [
+    'path' => base_path('resources/views'),
+    'cache' => [
+        'enabled' => env('APP_ENV') === 'production',
+        'path' => storage_path('cache/views'),
+    ],
+];
+PHP;
+            file_put_contents(getcwd() . '/config/views.php', $viewsConfig);
+
+            // session.php
+            $sessionConfig = <<<'PHP'
+<?php
+
+return [
+    'name' => env('SESSION_NAME', 'lalaz_session'),
+    'lifetime' => env('SESSION_LIFETIME', 120),
+    'secure' => env('SESSION_SECURE', false),
+    'http_only' => true,
+    'same_site' => 'Lax',
+];
+PHP;
+            file_put_contents(getcwd() . '/config/session.php', $sessionConfig);
+
+            // Create resources/views
+            @mkdir(getcwd() . '/resources/views', 0755, true);
+
+            if (!file_exists(getcwd() . '/resources/views/welcome.html.twig')) {
+                $welcomeHtml = <<<'HTML'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lalaz</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { margin-bottom: 0.5rem; color: #4f46e5; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lalaz</h1>
+        <p>The Modern PHP Framework</p>
+    </div>
+</body>
+</html>
+HTML;
+                file_put_contents(getcwd() . '/resources/views/welcome.html.twig', $welcomeHtml);
+            }
+        }        if ($features['database'] ?? false) {
+            $providers[] = 'Lalaz\Database\DatabaseServiceProvider::class';
+            $providers[] = 'Lalaz\Orm\OrmServiceProvider::class';
+
+            // database.php
+            $dbConfig = <<<'PHP'
+<?php
+
+return [
+    'default' => env('DB_CONNECTION', 'mysql'),
+    'connections' => [
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'lalaz'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+        ],
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'lalaz'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+        ],
+        'sqlite' => [
+            'driver' => 'sqlite',
+            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'prefix' => '',
+        ],
+    ],
+    'migrations' => 'migrations',
+];
+PHP;
+            file_put_contents(getcwd() . '/config/database.php', $dbConfig);
+        }
+
+        if ($features['auth'] ?? false) {
+            $providers[] = 'Lalaz\Auth\AuthServiceProvider::class';
+        }
+
+        if ($features['cache'] ?? false) {
+            $providers[] = 'Lalaz\Cache\CacheServiceProvider::class';
+        }
+
+        if ($features['queue'] ?? false) {
+            $providers[] = 'Lalaz\Queue\QueueServiceProvider::class';
+        }
+
+        $providersString = implode(",\n        ", $providers);
+
+        // router.php
+        $routerConfig = <<<'PHP'
+<?php
+
+return [
+    'files' => [
+        base_path('routes/web.php'),
+    ],
+];
+PHP;
+        file_put_contents(getcwd() . '/config/router.php', $routerConfig);
+
         // app.php
-        $appConfig = <<<'PHP'
+        $appConfig = <<<PHP
 <?php
 
 return [
@@ -277,18 +423,16 @@ return [
     'env' => env('APP_ENV', 'production'),
     'debug' => env('APP_DEBUG', false),
     'url' => env('APP_URL', 'http://localhost'),
-    
+    'timezone' => 'UTC',
+
     'providers' => [
-        Lalaz\Config\ConfigServiceProvider::class,
-        Lalaz\Logging\LogServiceProvider::class,
+        {$providersString},
     ],
 ];
 PHP;
 
         file_put_contents(getcwd() . '/config/app.php', $appConfig);
-    }
-
-    private function generateDockerFiles(array $features): void
+    }    private function generateDockerFiles(array $features): void
     {
         $dockerfile = <<<'DOCKER'
 FROM php:8.3-fpm-alpine
