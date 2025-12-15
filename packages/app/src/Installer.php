@@ -414,6 +414,18 @@ return [
 PHP;
         file_put_contents(getcwd() . '/config/router.php', $routerConfig);
 
+        // providers.php
+        $providersConfig = <<<PHP
+<?php
+
+return [
+    'providers' => [
+        {$providersString},
+    ],
+];
+PHP;
+        file_put_contents(getcwd() . '/config/providers.php', $providersConfig);
+
         // app.php
         $appConfig = <<<PHP
 <?php
@@ -424,10 +436,6 @@ return [
     'debug' => env('APP_DEBUG', false),
     'url' => env('APP_URL', 'http://localhost'),
     'timezone' => 'UTC',
-
-    'providers' => [
-        {$providersString},
-    ],
 ];
 PHP;
 
