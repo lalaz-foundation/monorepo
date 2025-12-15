@@ -92,11 +92,11 @@ final class ApplicationBootstrap
      *
      * This method:
      * 1. First loads providers from auto-discovered Lalaz packages (lalaz.json)
-     * 2. Then loads providers from the manual configuration (config/providers.php)
+     * 2. Then loads providers from the manual configuration (config/app.php)
      *
      * Manual providers take precedence and can override discovered ones.
      *
-     * The configuration should be in config/providers.php:
+     * The configuration should be in config/app.php:
      * ```php
      * return [
      *     'providers' => [
@@ -122,7 +122,7 @@ final class ApplicationBootstrap
         self::registerDiscoveredProviders($registry);
 
         // Then, register manually configured providers (these take precedence)
-        $providers = Config::getArray('providers.providers', []);
+        $providers = Config::getArray('app.providers', []);
 
         if (is_array($providers) && $providers !== []) {
             foreach ($providers as $provider) {
