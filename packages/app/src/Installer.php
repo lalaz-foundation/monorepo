@@ -6,7 +6,7 @@ namespace Lalaz\Installer;
 
 class Installer
 {
-    private const VERSION = '1.0.0-rc1';
+    private const VERSION = '1.0.0-rc.2';
 
     private static array $colors = [
         'reset' => "\033[0m",
@@ -184,38 +184,38 @@ class Installer
             'license' => 'MIT',
             'require' => [
                 'php' => '^8.3',
-                'lalaz/framework' => '^1.0',
+                'lalaz/framework' => '^1.0.0-rc.2',
             ],
             'autoload' => [
                 'psr-4' => [
                     'App\\' => 'app/',
                 ],
             ],
-            'minimum-stability' => 'stable',
+            'minimum-stability' => 'RC',
             'prefer-stable' => true,
         ];
 
         // Add packages based on features
         if ($projectType === 'web') {
-            $composer['require']['lalaz/web'] = '^1.0';
+            $composer['require']['lalaz/web'] = '^1.0.0-rc.2';
             $composer['require']['twig/twig'] = '^3.0';
         }
 
         if ($features['database'] ?? false) {
-            $composer['require']['lalaz/database'] = '^1.0';
-            $composer['require']['lalaz/orm'] = '^1.0';
+            $composer['require']['lalaz/database'] = '^1.0.0-rc.2';
+            $composer['require']['lalaz/orm'] = '^1.0.0-rc.2';
         }
 
         if ($features['auth'] ?? false) {
-            $composer['require']['lalaz/auth'] = '^1.0';
+            $composer['require']['lalaz/auth'] = '^1.0.0-rc.2';
         }
 
         if ($features['cache'] ?? false) {
-            $composer['require']['lalaz/cache'] = '^1.0';
+            $composer['require']['lalaz/cache'] = '^1.0.0-rc.2';
         }
 
         if ($features['queue'] ?? false) {
-            $composer['require']['lalaz/queue'] = '^1.0';
+            $composer['require']['lalaz/queue'] = '^1.0.0-rc.2';
         }
 
         file_put_contents(
