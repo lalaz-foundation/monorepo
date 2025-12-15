@@ -642,18 +642,33 @@ final class PackageManager
             return [];
         }
 
-        $providersFile = $this->resolveProjectPath('config/providers.php');
-        $config = $this->readProvidersConfig($providersFile);
-        $providers = $config['providers'] ?? [];
-
-        if (!in_array($provider, $providers, true)) {
-            $providers[] = $provider;
-            $config['providers'] = $providers;
-            $this->writeProvidersConfig($providersFile, $config);
-            return ["Provider registered: {$provider}"];
+        $appFile = $this->resolveProjectPath('config/app.php');
+        if (!is_file($appFile)) {
+            return ['config/app.php not found. Cannot register provider.'];
         }
 
-        return ["Provider already registered: {$provider}"];
+        $content = file_get_contents($appFile);
+        if ($content === false) {
+            return ['Failed to read config/app.php'];
+        }
+
+        if (str_contains($content, $provider . '::class')) {
+            return ["Provider already registered: {$provider}"];
+        }
+
+        // Look for 'providers' => [
+        $pattern = "/'providers'\s*=>\s*\[/";
+        if (preg_match($pattern, $content)) {
+            $replacement = "'providers' => [\n        {$provider}::class,";
+            $newContent = preg_replace($pattern, $replacement, $content, 1);
+
+            if ($newContent !== null) {
+                file_put_contents($appFile, $newContent);
+                return ["Provider registered: {$provider}"];
+            }
+        }
+
+        return ["Could not find 'providers' array in config/app.php"];
     }
 
     /**
@@ -670,26 +685,34 @@ final class PackageManager
             return [];
         }
 
-        $providersFile = $this->resolveProjectPath('config/providers.php');
-        if (!is_file($providersFile)) {
-            return ['config/providers.php not found while removing provider.'];
+        $appFile = $this->resolveProjectPath('config/app.php');
+        if (!is_file($appFile)) {
+            return ['config/app.php not found while removing provider.'];
         }
 
-        $config = $this->readProvidersConfig($providersFile);
-        $providers = $config['providers'] ?? [];
-
-        $filtered = array_values(
-            array_filter($providers, fn ($entry) => $entry !== $provider),
-        );
-
-        if ($filtered === $providers) {
-            return ["Provider not registered: {$provider}"];
+        $content = file_get_contents($appFile);
+        if ($content === false) {
+            return ['Failed to read config/app.php'];
         }
 
-        $config['providers'] = $filtered;
-        $this->writeProvidersConfig($providersFile, $config);
+        $lines = explode("\n", $content);
+        $newLines = [];
+        $found = false;
 
-        return ["Provider removed: {$provider}"];
+        foreach ($lines as $line) {
+            if (str_contains($line, $provider . '::class')) {
+                $found = true;
+                continue;
+            }
+            $newLines[] = $line;
+        }
+
+        if ($found) {
+            file_put_contents($appFile, implode("\n", $newLines));
+            return ["Provider removed: {$provider}"];
+        }
+
+        return ["Provider not registered: {$provider}"];
     }
 
     /**
@@ -713,54 +736,6 @@ final class PackageManager
         }
 
         return ['Config file not found while removing.'];
-    }
-
-    /**
-     * Reads the providers configuration file.
-     *
-     * @param string $file The path to providers.php
-     *
-     * @return array<string, mixed> The configuration array
-     */
-    private function readProvidersConfig(string $file): array
-    {
-        if (is_file($file)) {
-            $config = require $file;
-            if (is_array($config)) {
-                return $config;
-            }
-        }
-
-        return ['providers' => []];
-    }
-
-    /**
-     * Writes the providers configuration file.
-     *
-     * @param string              $file   The path to providers.php
-     * @param array<string,mixed> $config The configuration to write
-     *
-     * @return void
-     */
-    private function writeProvidersConfig(string $file, array $config): void
-    {
-        $providers = $config['providers'] ?? [];
-        $lines = [
-            '<?php declare(strict_types=1);',
-            '',
-            'return [',
-            "    'providers' => [",
-        ];
-
-        foreach ($providers as $provider) {
-            $lines[] = "        {$provider}::class,";
-        }
-
-        $lines[] = '    ],';
-        $lines[] = '];';
-        $lines[] = '';
-
-        file_put_contents($file, implode(PHP_EOL, $lines));
     }
 
     /**
